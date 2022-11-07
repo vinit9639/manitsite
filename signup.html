@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], input[type=password] {
+  width: 90%;
+  height: 50px;
+  padding: 1px;
+  margin-top: 20px;
+  margin-left: 20px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.container {
+  padding: 16px;
+}
+
+.split {
+  height: 650px;
+  width: 40%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 100px;
+}
+
+.left {
+  left: 0;
+  background-color: #686868;
+}
+
+.right {
+  right: 0;
+  background-color: #404040;
+}
+
+hr {
+    border: 1px solid #504b4b;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.top {
+    color: white;
+    margin-left: 20px;
+}
+
+.top-text {
+    background-color: #404040;
+    width: 100%;
+    height: 70px;
+}
+
+h2 {
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.img-radius {
+    width: 500px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+  height: 50px;
+  text-align: bottom;
+  margin-top: 10px;
+  padding: 16px;
+  margin-top: 150px;
+}
+
+
+.end-section {
+        background-color: black;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+       }
+
+       .end-details {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: small;
+        color: white;
+        margin-top: 20px;
+
+       }
+
+</style>
+</head>
+<body>
+<div class="top-text">
+    <img src="smilelogo_bw.svg" alt="Smile Logo" style="height: 50px; margin-top: 10px;">
+</div>
+<form action="">
+<div class="split left">
+    <div class="top">
+        <h1>Welcome To</h1>
+    </div>
+    <hr>
+   <div class="img-radius">
+    <img src="smilelogo.svg" alt="Smile Logo">
+   </div>
+   <div class="signin">
+    <p style="color: black;">Already have an account?<a href="login.html">Sign in</a></p>
+ </div>
+</div>
+
+<div class="split right">
+    <div class="top">
+        <h1 style="color: yellow;">Sign Up</h1>
+    </div>
+    <hr>
+    <h2>Enter your credentials</h2>
+    <div class="container">
+        <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+    <hr>
+
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn">Register</button>
+</div>
+</div>
+    </form>
+    <div class="end-section" style="margin-top: 700px;">
+        <div class="end-details" style="float: left; margin-left: 100px;">
+            <h1>Contacts</h1>
+            <p>Address: Link Road Number 3, Near Kali Mata Mandir, Bhopal, Madhya Pradesh, India 462003</p>
+            <p>Telephone : +91 755 4051000, 4052000</p>
+            <p>FAX : +91-755 2670562</p>
+        </div>
+        <div class="end-details"style="float: right; margin-right: 300px;">
+            <p style="margin-top: 50px;">Email : pro[at]manit[dot]ac[dot]in,</p>
+            <p>officeofdirector[at]manit[dot]ac[dot]in</p>
+            <p>Web : <a href="www.manit.ac.in">www.manit.ac.in</a></p>
+        </div>
+    </div>
+</body>
+</html> 

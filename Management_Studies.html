@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Studies</title>
+    <link rel="icon" type="image/x-icon" href="MANIT LOGO.png" >
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+       .navbar {
+        overflow: hidden;
+        background-color: #333;
+       }
+
+       .navbar a{
+        float: left;
+        display: block;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+       }
+       
+       .dropdwn {
+        float: left;
+        overflow: hidden;
+        background-color: #333;
+       }
+       
+       .dropdwn .dropbtn{
+        font-size: medium;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+       }
+       
+       .navbar a:hover, .dropdwn:hover, .dropbtn {
+        background-color: red;
+       }
+
+       .dropdwn-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+       }
+       
+       .dropdwn-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+       }
+       
+       .dropdwn-content a:hover {
+        background-color: #ddd;
+       }
+
+       .dropdwn:hover .dropdwn-content {
+        display: block;
+       }
+
+       .navbar .search-container {
+       float: right;
+       }
+
+       .navbar input[type=text] {
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       border: none;
+       font-size: 17px;
+       }
+
+       .navbar .search-container button {
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       background: #ddd;
+       font-size: 17px;
+       border: none;
+       cursor: pointer;
+       }
+
+       .navbar .search-container button:hover {
+       background: #ccc;
+       }
+
+       @media screen and (max-width: 600px) {
+       .navbar a, .navbar input[type=text], .navbar .search-container button {
+       float: none;
+       display: block;
+       text-align: left;
+       width: 100%;
+       margin: 0;
+       padding: 14px;
+        }
+       }
+       .navbar input[type=text] {
+       border: 1px solid #ccc;  
+       }
+
+       .inner-top-banner {
+        color: black;
+        background: url("https://images.shiksha.com/mediadata/images/1515656470php9JdBKt.jpeg");
+        background-size: 100% 100%;
+        min-height: 300px;
+       }
+
+       @media (max-width: 1024px) and (min-width:768px) {
+        .inner-top-banner {
+            min-height: 190px;
+        }
+       }
+
+       .form-btn{
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       background: #ddd;
+       font-size: 17px;
+       border: none;
+       cursor: pointer;
+       }
+
+       .form-btn :hover {
+        background-color: #04AA6D;
+       }
+
+       .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+        margin-left: 100px;
+        margin-right: 400px;
+        margin-top: 20px;
+        
+       }
+
+       .text-head {
+        font-size: 20px;
+        background-color: #04AA6D;
+        border: 1px solid #ccc;
+        color: white;
+        padding-left: 10px;
+        margin-top: 20px;
+       }
+       
+       .text-border {
+        border: 1px solid #ddd;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+       }
+
+       .text-background {
+        background-color: #ddd;
+        position: relative;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding:10px;
+       }
+
+       #nav-table {
+        font-family: 'Times New Roman', Times, serif;
+        border-collapse: collapse;
+       }
+
+       #nav-table td, #nav-table th{
+        border: 1px solid #ddd;
+        padding: 10px;
+       }
+
+       #nav-table th {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+       }
+
+       #nav-table tr:hover {
+        background-color: #ddd;
+       }
+
+       #table {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        font-size: 12px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+       }
+
+       #table td, #table th {
+       border: 1px solid #ddd;
+       padding: 10px;
+       }
+
+       #table tr:hover {
+        background-color: #ddd;
+       }
+
+       #table th {
+       padding-top: 12px;
+       padding-bottom: 12px;
+       text-align: left;
+       background-color: #04AA6D;
+       color: white;
+       }
+       
+       .end-section {
+        background-color: black;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+       }
+
+       .end-details {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: small;
+        color: white;
+        margin-top: 20px;
+
+       }
+
+    </style>
+</head>
+<body>
+    <div class="form-btn" style="float: right;">
+        <a href="signup.html">Sign Up</a>
+    </div>
+    <div class="form-btn">
+    </div>
+    <p style="background-color:teal"><img src="Maulana-Azad-National-Institute-of-Technology-Logo.png" style="width: 800px; height:200px; margin-left: 50px;"></p>
+    <div class="dropdwn">
+        <button class="dropbtn">Home</button>
+        <div class="dropdwn-content">
+        <a href="History.html">History</a>
+        <a href="About_Us.html">About Us</a>
+        <a href="Mission_Vision_&_Goal.html">Mission Vision & Goal</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Academics</button>
+        <div class="dropdwn-content">
+            <a href="Academics_programmes.html">Academics Programmes</a>
+            <a href="Ordinance.html">Ordinance</a>
+            <a href="UG_PG_Schemes.html">UG PG Schemes</a>
+            <a href="Admission_Registration.html">Admission/Registration</a>
+            <a href="Examination_section.html">Examination Section</a>
+            <a href="Time_table.html">Time Table</a>
+            <a href="Scholarship.html">Scholarship</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Departments</button>
+        <div class="dropdwn-content">
+            <a href="Architecture_&_planning.html">Architecture & Planning</a>
+            <a href="Engineering.html">Engineering</a>
+            <a href="Science.html">Science</a>
+            <a href="Humanities.html">Humanities</a>
+            <a href="Management_Studies.html">Management Studies</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Student Zone</button>
+        <div class="dropdwn-content">
+            <a href="Professional_Club.html">Professional Club</a>
+            <a href="Literacy_Club.html">Literacy Club</a>
+            <a href="Technical_Club.html">Technical Club</a>
+            <a href="Cultural_Club.html">Cultural Club</a>
+            <a href="Social_committee.html">Social Committee</a>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="search-container">
+            <form action="MANIT">
+            <input type="text" placeholder="Search......." name="search">
+             <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="inner-top-banner"></div>
+    <h1 style="text-align: center; background-color: #333; color: #ccc;">Management Department</h1>
+    <div style="float: right;">
+        <table id="nav-table" style="margin-right: 50px; margin-top: 10px; width: 300px;">
+            <tr><th><h3>Departments</h3></th></tr>
+            <tr><td><a href="Architecture_&_planning.html" style="text-decoration: none;">Architecture & Planning</a></td></tr>
+            <tr><td><a href="Engineering.html" style="text-decoration: none;">Engineering</td></tr>
+            <tr><td><a href="Science.html" style="text-decoration: none;">Science</a></td></tr>
+            <tr><td><a href="Humanities" style="text-decoration: none;">Humanities</a></td></tr>
+            <tr><td><a href="Management_Studies.html" style="text-decoration: none;">Management Studeies</a></td></tr>
+        </table> 
+    </div>
+
+    <div class="text">
+        <div class="text-head">
+            <p><b>Home/About the Department</b></p>
+        </div>
+        <div class="text-border">
+            <div class="text-background">
+                <p>Department of Management Studies (DMS) is one of the emerging management departments in the country which develops business graduates with a holistic perspective and versatile in functional areas of business and industry. Since its inception, the Department has produced management graduates who are currently serving globally in reputed business organizations both in public and private sector organizations.  The DMS imbibes the overall openness of the culture in MANIT, Bhopal, valuing all its stakeholders. Department of Management studies launched the MBA programme in July 2006.</p>
+                <p>The Department offers three programmes. The full-time MBA Programme is designed to be completed in two years. Full time Doctoral Programme (Ph.D.) offered in areas such as Marketing Management, Strategic Management, Supply Chain Management, Financial Management and Information Systems. The programmes of the DMS are designed to respond to intellectual and practical requirements of the business and industry.</p>
+                <p><b>Academic Programmes:</b></p>
+                <ul>
+                    <li>Two-year full time Master's programme in Business Administration (MBA)</li>
+                    <li>Full time Doctoral Programme in Management Studies</li>
+                </ul>
+                <p><b>MBA Programme</b></p>
+                <p>The MBA program has been developed after extensive research and interaction with the various stakeholders. Curriculum facilitate students in understanding of managerial concepts and creating the skills required for emerging problem solving competency in students matching their requirement with their skills and predispositions.</p>
+                <p>The objective of the program is to impart management education in state of art technology so as enable the students to optimally equip with the changing requirements of the corporate and society.</p>
+                <p>Eminent and experienced faculty enables the students to acquire a combination of various technical skills and value focused decision making ability. The program places heavy emphasis on practical experience for which extensive interaction with the industry is built into the curriculum.</p>
+                <p><b>Highlight of the Program</b></p>
+                <p>In today’s global competitive environment, competency based management is widely viewed as a major source of competitive advantage. To succeed in this environment, organization needs people with skills, knowledge and leadership to manage business effectively and to make corporations competitive.</p>
+                <p>The institute recognizes core strength in dynamic and volatile business environment. MBA program focuses on the determinants of real value for business, by emphasizing, business leadership and technology. MBA program provides with a valuable combination of management concepts and skill development that set it apart from other B-schools. It offers dual specialization in Human Resource, Marketing, Finance, & Systems. The two year full time degree program includes basic core courses, electives and industry oriented summer internship. The aim is reflected in the compressed time frame, reliance on group work and also focus on creativity and entrepreneurship development. The MBA program follows a semester pattern and imparts in-depth knowledge in the crosscuts of all academic areas and pools together resources from every functional area, thus driving home the importance of seeing the big picture in business. The student represents a good mix of fresh graduates from various disciplines and experienced professionals.</p>
+                <p>The program is build up on the functional knowledge of the students, permitting them to explore their interests to a greater depth of corporate problems. It emphasizes more on application of management principles and techniques with continuous industrial interactions. The industry oriented projects and assignments form the integral part of the curriculum that helps in individual betterment with due emphasis on team work.</p>
+            </div>
+        </div>
+
+        <div class="text-head">
+            <p><b>Vision</b></p>
+        </div>
+        <div class="text-border">
+            <div class="text-background">
+                <p>The Department of Management studies MANIT is dedicated to the pursuit of excellence and innovation in research and teaching. It aspires to leadership in all areas of research activity, and advocacy for policy – locally, nationally and internationally – to improve Business and social outcomes.</p>
+                <p>Our aspiration is to become one of the leading global providers of business and Management education and research.</p>
+                <p>We aim to critically evaluate and influence policy design, corporate governance, and business practices to secure the best possible outcomes for our stakeholders and for the broader societies in which we operate</p>
+            </div>
+        </div>
+        <div class="text-head">
+            <p><b>Mission</b></p>
+        </div>
+        <div class="text-border">
+            <div class="text-background">
+                <p><b>Mission</b></p>
+                <p>The mission of DMS MANIT is to contribute to society through the pursuit of education, learning, and research at the highest international levels of excellence and also to create ideas that deepen and advance our understanding of management and with those ideas to develop innovative, principled, and insightful leaders who change the world.</p>
+                <p>We aim to be an exemplary service department, in building a vibrant, diverse community that values and embrace a full spectrum of experiences, view points and intellectual approaches in delivering the highest quality services to our students, in line with the overall strategy of the MANIT. We put Students at the heart of what we do, and across the department you can expect us to adhere to the following values:</p>
+                <ul>
+                    <li>Create an outstanding student experience via collaboration to maximize the intellectual, social and economic potential of all our learners and communities.</li>
+                    <li>An extensive range of academic subjects in all major subject groups, quality and depth of provision across all subjects.</li>
+                    <li>Close inter-relationship between teaching, scholarship, and research, strong support for individual researchers as well as research groups.</li>
+                    <li>Education which enhances the ability of students to learn throughout life.</li>
+                </ul>
+                <p><b>Strategic Objectives</b></p>
+                <ul>
+                    <li>MBA Student Recruitment Plan.</li>
+                    <li>Development of Curriculum and Employability Strategy.</li>
+                    <li>Promote a global outlook to achieve meaningful and sustainable interaction with key stakeholder groups, including alumni and employers.</li>
+                    <li>Providing opportunities for broadening the experience of students and staff through participation.</li>
+                    <li>Providing opportunities for broadening the experience of students and staff through participation.</li>
+                    <li>Continuous improvement using a variety of methods, including measuring satisfaction, setting challenging targets and monitoring our performance against service level agreements</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-head">
+            <p><b>Research Groups</b></p>
+        </div>
+        <div class="text-border">
+            <table id="table">
+                <tr>
+                    <td><b>Marketing:</b></td>
+                    <td>(Retailing, Consumer Behaviour, CRM, Service Marketing, Advertisement, Sales & Distribution</td>
+                </tr>
+                <tr>
+                    <td><b>Finance:</b></td>
+                    <td>(Behavioural Finance, Financial markets and Financial intermediation, Capital and financial structure, corporate governance and Accounting)</td>
+                </tr>
+                <tr>
+                    <td><b>Human Resource Management:</b></td>
+                    <td>(Organization Development & Change Management, Strategic HRM, Org. Culture, Employee evaluation and assessment, Wage, Training Needs,  Issues and Challenges of HRM Practices)</td>
+                </tr>
+                <tr>
+                    <td><b>Behavioural and Social Sciences:</b></td>
+                    <td>(Applied Behavioural Science: (Social Cognition Attitudes  Prosocial Behaviour, Prejudice and Discrimination Self and Social Identity, Group  Behaviour Social Influence, Interpersonal  Relationships) </td>
+                </tr>
+                <tr>
+                    <td><b>Economics:</b></td>
+                    <td>(Budget, Taxes and Public Investment, Economic Growth, Green Economics, Inequality and Poverty, Race and Ethnicity, Globalization, Unions and Labour Standards)</td>
+                </tr>
+                <tr>
+                    <td><b>Supply Chain management:</b></td>
+                    <td>Inventory Optimization & Inventory Management, MRO & Spare Parts, Mobility, and Sourcing & Procurement</td>
+                </tr>
+                <tr>
+                    <td><b>Rural management:</b></td>
+                    <td>Agribusiness. Agricultural Risk Management, Rural  Trade, Agriculture and Rural Development, Biodiversity,  Gender and Sustainable Development, Policy and Practice in Environmental Management</td>
+                </tr>
+            </table>
+        </div>
+        <div class="text-head">
+            <p><b>Labs</b></p>
+        </div>
+        <div class="text-border">
+            <div class="text-background">
+                <p>Data Analytic Research Lab :  </p>
+                <p>No. Computer: 15</p>
+                <p>Software: SYSTAT</p>
+            </div>
+        </div>
+        <div class="text-head">
+            <p><b>Projects/patent/consultant</b></p>
+        </div>
+        <div class="text-border">
+            <table id="table">
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Name of Project</th>
+                    <th>Funding Agency</th>
+                    <th>Investigator</th>
+                    <th>Grant Sanctioned</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>An analysis of export performance of Indian High Tech and Medium Tech industries with reference to manufacturing sector</td>
+                    <td>Grant in Aid/MANIT</td>
+                    <td>Dr. Amit Banerji</td>
+                    <td>Rs. 3.00 lacs</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Socio-Economic Assessment of Public Private Partnership Road Project</td>
+                    <td>Lotus White Concept Realization
+
+                        Private Limited, Delhi</td>
+                    <td>Dr. Varsha  Rokade</td>
+                    <td>Rs. 60,000/- </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>To Assess the Impact of “Advance Training For Professionals” Short Term Professional Course for IT/ITES Sector</td>
+                    <td>Sponsored By IIITM, Gwalior and funded by Department of Electronics and Information Technology, New Delhi</td>
+                    <td>Dr. G. S. Kushwaha,
+
+                        Dr SPS Rajput,
+                       
+                       Dr. D. Tomar</td>
+                       <td>Rs. 100000/-</td>
+                </tr>
+            </table>
+        </div>
+        <div class="text-head">
+            <p><b>Event/News</b></p>
+        </div>
+        <div class="text-border">
+            <p>Events conducted</p>
+            <table id="table">
+                <tr>
+                    <th rowspan="2">Sr. No.</th>
+                    <th rowspan="2">Title</th>
+                    <th rowspan="2">Name of Sponsor</th>
+                    <th colspan="2">Duration</th>
+                    <th rowspan="2">Coordinators</th>
+                </tr>
+                <tr>
+                    <th>From</th>
+                    <th>to</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>IP Procedure, Patent Drafting and Commercialization</td>
+                    <td>Co-sponsored TEQIP II</td>
+                    <td>15/10/2016</td>
+                    <td>19/10/2016</td>
+                    <td>Dr Varsha Rokade</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>ERP- Basic Functional Module Workshop</td>
+                    <td>Self-sponsored</td>
+                    <td>05/03/2016</td>
+                    <td>07/03/2016</td>
+                    <td>Dr. G. S. Kushwaha and Dr. Hrgovind Singh</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Professional Ethics and Human Values</td>
+                    <td>Self-sponsored</td>
+                    <td>02/03/2016</td>
+                    <td>02/03/2016</td>
+                    <td>Dr Varsha Rokade</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td> Applications of SPSS in Multidisciplinary Research</td>
+                    <td>Co-sponsored TEQIP II</td>
+                    <td>06/01/2016</td>
+                    <td>10/01/2016</td>
+                    <td>Dr Varsha Rokade</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td> IPR Issues: Patent Drafting and Processing of Patent Application</td>
+                    <td>Co-sponsored TEQIP II</td>
+                    <td>14/03/2015</td>
+                    <td>18/03/2015</td>
+                    <td>Dr Varsha Rokade</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td> Research Methodology and Applications of SPSS in Multidisciplinary Research</td>
+                    <td>Co-sponsored TEQIP II</td>
+                    <td>04/01/2015</td>
+                    <td>08/01/2015</td>
+                    <td>Dr Varsha Rokade</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>National conference on MS Excel for managers</td>
+                    <td>Self-sponsored</td>
+                    <td>02/9/2014</td>
+                    <td>03/9/2014</td>
+                    <td>Dr. G. S. Kushwaha and Dr. Hrgovind Singh</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Research Technique and Applications of SPSS</td>
+                    <td>Co-sponsored TEQIP II</td>
+                    <td>29/07/2013</td>
+                    <td>02/08/2013</td>
+                    <td>Dr Varsha Rokade</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>Skill Development for the Faculty</td>
+                    <td>TEQIP II</td>
+                    <td>20/12/2012</td>
+                    <td>21/12/2012</td>
+                    <td>Dr Varsha Rokade</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td>National seminar on Deployment & Collaboration of SPSS Reports and Models</td>
+                    <td>Self-sponsored</td>
+                    <td>15/12/2012</td>
+                    <td>15/12/2012</td>
+                    <td>Dr. G. S. Kushwaha and Dr. Hrgovind Singh</td>
+                </tr>
+                <tr>
+                    <td>11.</td>
+                    <td>Performance Vs Learning</td>
+                    <td>TEQIP II</td>
+                    <td>13/12/2012</td>
+                    <td>14/12/2012</td>
+                    <td>Dr Varsha Rokade</td>
+                </tr>
+            </table>
+            <p><b>Expert Lecture</b></p>
+            <table id="table">
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Name of Expert</th>
+                    <th>Topic</th>
+                    <th>Date</th>
+                    <th>Affilation</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Prof. B B Bhattacharya  </td>
+                    <td>Eco. Env. Bus</td>
+                    <td>Oct. 2010</td>
+                    <td>Vice Chancellor, JNU, Delhi</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Dr. S. Biswas  </td>
+                    <td>Innov. Mgmt</td>
+                    <td>Aug. 2010</td>
+                    <td>Sc. G, DST</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Mr. P Bhanadarkar  </td>
+                    <td>Six Sigma</td>
+                    <td>Nov. 2010</td>
+                    <td>Manager</td>
+                </tr>
+            </table>
+        </div>
+        <div class="text-head">
+            <p><b>Out Reach activities</b></p>
+        </div>
+        <div class="text-border">
+            <div class="text-background">
+                <p><b>Dr. Amit Baneji</b></p>
+                <ol type="1">
+                    <li>Delivery of expert lectures in - Indira Gandhi National tribal University, Amarkantak in Feb, 2015</li>
+                    <li>Editorial Member, Reviewer Various Journals/ Conferences of repute.- Sage, Elsevier, Project Muse</li>
+                    <li>Examiner of Doctoral and Masters dissertations of - NIT, State Universities.</li>
+                    <li>Member of Board of Studies (BOS)/Governing Bodies of - JLU, Bhopal</li>
+                </ol>
+                <p><b>Dr. G. S. Kushwaha</b></p>
+                <ol type="1">
+                    <li>Reviewer of Journal of Applied Research and Technology (Scopus indexed), Iranian Journal of Management Studies (ESCI indexed), Journal of Services Marketing (SSCI and Scopus indexed)</li>
+                    <li>Editorial member of international journal “International Journal of Enterprise Computing and Business Systems</li>
+                    <li>Member of Board of Studies (BOS)/Governing Bodies of PSSCIVE, Shyamla Hills, Bhopal. Member of Expert panel in. CBSE</li>
+                </ol>
+                <p><b>Dr. Bikrant Kesari</b></p>
+                <ol type="1">
+                    <li>Outstanding Reviewer April 2018 in recognition of the contribution made to the quality of the Journal for <b>Journal of Retailing and Consumer Service</b> Elsevier Since Direct ABDC –A Ranking Journal</li>
+                    <li>5 year (2011-16) as Institute Nodal Officer AISHE (MHRD New Delhi)</li>
+                    <li>Delivery of expert lectures in –  SVSI college Dhanbad Jharkhand</li>
+                    <li>Advisory member of for MEDP & capacity Building of Shree Vishnu Sevasrama Vidyapitha Jharkhand</li>
+                    <li>Examiner of PG Dissertations of – MBA Jiwagi Universities Gwalior M.P.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

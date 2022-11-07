@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANIT</title>
+    <link rel="icon" type="image/x-icon" href="MANIT LOGO.png" >
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+       .navbar {
+        overflow: hidden;
+        background-color: #333;
+       }
+
+       .navbar a{
+        float: left;
+        display: block;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        cursor: pointer;
+       }
+       
+       .dropdwn {
+        float: left;
+        overflow: hidden;
+        background-color: #333;
+       }
+       
+       .dropdwn .dropbtn{
+        font-size: medium;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+       }
+       
+       .navbar a:hover, .dropdwn:hover, .dropbtn {
+        background-color: red;
+       }
+
+       .dropdwn-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+       }
+       
+       .dropdwn-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+       }
+       
+       .dropdwn-content a:hover {
+        background-color: #ddd;
+       }
+
+       .dropdwn:hover .dropdwn-content {
+        display: block;
+       }
+
+       .navbar .search-container {
+       float: right;
+       }
+
+       .navbar input[type=text] {
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       border: none;
+       font-size: 17px;
+       }
+
+       .navbar .search-container button {
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       background: #ddd;
+       font-size: 17px;
+       border: none;
+       cursor: pointer;
+       }
+
+       .navbar .search-container button:hover {
+       background: #ccc;
+       }
+
+       @media screen and (max-width: 600px) {
+       .navbar a, .navbar input[type=text], .navbar .search-container button {
+       float: none;
+       display: block;
+       text-align: left;
+       width: 100%;
+       margin: 0;
+       padding: 14px;
+        }
+       }
+       .navbar input[type=text] {
+       border: 1px solid #ccc;  
+       }
+
+       .inner-top-banner {
+        color: black;
+        background: url("https://images.shiksha.com/mediadata/images/1515656470php9JdBKt.jpeg");
+        background-size: 100% 100%;
+        min-height: 300px;
+       }
+
+       @media (max-width: 1024px) and (min-width:768px) {
+        .inner-top-banner {
+            min-height: 190px;
+        }
+       }
+
+       .form-btn{
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       background: #ddd;
+       font-size: 17px;
+       border: none;
+       cursor: pointer;
+       }
+
+       .form-btn :hover {
+        background-color: #04AA6D;
+       }
+
+       .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+        margin-left: 100px;
+        margin-right: 400px;
+        margin-top: 20px;
+        
+       }
+
+       .text-head {
+        font-size: 20px;
+        background-color: #04AA6D;
+        border: 1px solid #ccc;
+        color: white;
+        padding-left: 10px;
+        margin-top: 20px;
+       }
+       
+       .text-border {
+        border: 1px solid #ddd;
+        width: 800px;
+        height: 700px;
+        margin-left: 100px;
+        margin-top: 20px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+       }
+
+       .text-background {
+        background-color: #ddd;
+        position: relative;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding:10px;
+       }
+
+       #nav-table {
+        font-family: 'Times New Roman', Times, serif;
+        border-collapse: collapse;
+       }
+
+       #nav-table td, #nav-table th{
+        border: 1px solid #ddd;
+        padding: 10px;
+       }
+
+       #nav-table th {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+       }
+
+       #nav-table tr:hover {
+        background-color: #ddd;
+       }
+
+       #table {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        font-size: 12px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+       }
+
+       #table td, #table th {
+       border: 1px solid #ddd;
+       padding: 10px;
+       }
+
+       #table tr:hover {
+        background-color: #ddd;
+       }
+
+       #table th {
+       padding-top: 12px;
+       padding-bottom: 12px;
+       text-align: left;
+       background-color: #04AA6D;
+       color: white;
+       }
+
+       .end-section {
+        background-color: black;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+       }
+
+       .end-details {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: small;
+        color: white;
+        margin-top: 20px;
+
+       }
+
+    </style>
+</head>
+<body>
+    <div class="form-btn" style="float: right;">
+        <a href="signup.html">Sign Up</a>
+    </div>
+    <div class="form-btn">
+    </div>
+    <p style="background-color:teal"><img src="Maulana-Azad-National-Institute-of-Technology-Logo.png" style="width: 800px; height:200px; margin-left: 50px;"></p>
+    <div class="dropdwn">
+        <button class="dropbtn">Home</button>
+        <div class="dropdwn-content">
+        <a href="History.html">History</a>
+        <a href="About_Us.html">About Us</a>
+        <a href="Mission_Vision_&_Goal.html">Mission Vision & Goal</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Academics</button>
+        <div class="dropdwn-content">
+            <a href="Academics_programmes.html">Academics Programmes</a>
+            <a href="Ordinance.html">Ordinance</a>
+            <a href="UG_PG_Schemes.html">UG PG Schemes</a>
+            <a href="Admission_Registration.html">Admission/Registration</a>
+            <a href="Examination_section.html">Examination Section</a>
+            <a href="Time_table.html">Time Table</a>
+            <a href="Scholarship.html">Scholarship</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Departments</button>
+        <div class="dropdwn-content">
+            <a href="Architecture_&_planning.html">Architecture & Planning</a>
+            <a href="Engineering.html">Engineering</a>
+            <a href="Science.html">Science</a>
+            <a href="Humanities.html">Humanities</a>
+            <a href="Management_Studies.html">Management Studies</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Student Zone</button>
+        <div class="dropdwn-content">
+            <a href="Professional_Club.html">Professional Club</a>
+            <a href="Literacy_Club.html">Literacy Club</a>
+            <a href="Technical_Club.html">Technical Club</a>
+            <a href="Cultural_Club.html">Cultural Club</a>
+            <a href="Social_committee.html">Social Committee</a>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="search-container">
+            <form action="MANIT">
+            <input type="text" placeholder="Search......." name="search">
+             <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="inner-top-banner"></div>
+    <h1 style="text-align: center; background-color: #333; color: #ccc;">RAJBHASA KARYANVAN CELL</h1>
+    <div style="float: right;">
+        <table id="nav-table" style="margin-right: 50px; margin-top: 10px; width: 300px;">
+            <tr><th style="font-size: 18px;">Literacy Clubs</th></tr>
+            <tr><td>Rajbhasha Karyanvanyan Cell</td></tr>
+            <tr><td>IBC Cell</td></tr>
+            <tr><td>Debating Cell</td></tr>
+            <tr><td>Drishant Cell</td></tr>
+            <tr><td>Magazine Editorial Cell</td></tr>
+            <tr><td>Quzzier Cell</td></tr>
+        </table>
+    </div>
+    <div class="text">
+        <table id="table">
+            <tr>
+                <td>संयोजक</td>
+                <td>डॉ. के. के. धोटे</td>
+            </tr>
+            <tr>
+                <td><ul>
+                    <li>सह-संयोजिका</li>
+                    <li>सह-संयोजक</li>
+                </ul></td>
+                <td><ul>
+                    <li>डॉ. प्रियंका पालीवाल</li>
+                    <li>डॉ. पंकज स्वर्णकार</li>
+                </ul></td>
+            </tr>
+        </table>
+        <p><b>समिति के बारे में</b></p>
+        <p>राजभाषा कार्यान्वयन समिति का मूल उद्देश्य राजभाषा हिन्दी एवं भारतीय संस्कृति का प्रचार-प्रसार कर देशवासियों में राष्ट्र गौरव एवं स्वाभिमान की भावना का विकास करना है। समीति का उद्देश्य इस विचार से प्रेरित है कि हिन्दी ही एक मात्र ऐसी कड़ी है जो सम्पूर्ण भारत को एकता के सूत्र में बांधकर राष्ट्रहित के पथ पर अग्रसर कर सकती है, जिस हेतु समिति प्रति वर्ष देश के सबसे बड़े अंतर्महाविद्यालीन हिन्दी महोत्सव ‘तूर्यनाद’ का आयोजन करवाती है। समिति हिन्दी भाषा के गौरव के संवर्धन करने हेतु संकल्पित है तथा इस उद्देश्य की प्राप्ति के लिए सदैव प्रयासरत है।</p>
+        <p>समिति द्वारा 'तूर्यनाद' हिन्दी महोत्सव  में हिन्दी के प्रसार हेतु खिचड़ी, वाद–विवाद प्रतियोगिता, कवि सम्मेलन, चक्रव्यूह, अभिव्यंजना, भारत मंथन, तकनीकी कार्यशाला, अतिथि परिचर्चा जैसे विभिन्न प्रतियोगिता एवं कार्यक्रमों का आयोजन किया जाता है। समिति द्वारा कई अन्य कार्यक्रमों जैसे विवेकानन्द जयंती के उपलक्ष्य में "विवेकोत्सव", स्वदेशी दीपावली अभियान, मातृभाषा दिवस कार्यक्रम का आयोजन किया जाता है। इसके साथ ही नए सदस्यों की भर्ती हेतु प्रतिवर्ष समिति द्वारा वार्षिक चयन प्रक्रिया ‘आव्हान’ भी आयोजित की जाती है।</p>
+        <p>समिति द्वारा हिन्दी के प्रचार-प्रसार हेतु विभिन्न सोशल मीडिया माध्यमों का उपयोग किया जाता है। सभी सोशल मीडिया माध्यमों एवं कार्यक्रमों की जानकारी समिति की आधिकारिक वेबसाइट पर उपलब्ध है।</p>
+        <p>वेबसाइट- www.tooryanaad.in</p>
+    </div>
+    <div class="text-border">
+        <img src="Toorynaad_2022_3.jpg" style="width: 800px; height:700px;">
+    </div>
+</body>
+</html>

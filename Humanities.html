@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humanities Department</title>
+    <link rel="icon" type="image/x-icon" href="MANIT LOGO.png" >
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+       .navbar {
+        overflow: hidden;
+        background-color: #333;
+       }
+
+       .navbar a{
+        float: left;
+        display: block;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+       }
+       
+       .dropdwn {
+        float: left;
+        overflow: hidden;
+        background-color: #333;
+       }
+       
+       .dropdwn .dropbtn{
+        font-size: medium;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+       }
+       
+       .navbar a:hover, .dropdwn:hover, .dropbtn {
+        background-color: red;
+       }
+
+       .dropdwn-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+       }
+       
+       .dropdwn-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+       }
+       
+       .dropdwn-content a:hover {
+        background-color: #ddd;
+       }
+
+       .dropdwn:hover .dropdwn-content {
+        display: block;
+       }
+
+       .navbar .search-container {
+       float: right;
+       }
+
+       .navbar input[type=text] {
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       border: none;
+       font-size: 17px;
+       }
+
+       .navbar .search-container button {
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       background: #ddd;
+       font-size: 17px;
+       border: none;
+       cursor: pointer;
+       }
+
+       .navbar .search-container button:hover {
+       background: #ccc;
+       }
+
+       @media screen and (max-width: 600px) {
+       .navbar a, .navbar input[type=text], .navbar .search-container button {
+       float: none;
+       display: block;
+       text-align: left;
+       width: 100%;
+       margin: 0;
+       padding: 14px;
+        }
+       }
+       .navbar input[type=text] {
+       border: 1px solid #ccc;  
+       }
+
+       .inner-top-banner {
+        color: black;
+        background: url("https://images.shiksha.com/mediadata/images/1515656470php9JdBKt.jpeg");
+        background-size: 100% 100%;
+        min-height: 300px;
+       }
+
+       @media (max-width: 1024px) and (min-width:768px) {
+        .inner-top-banner {
+            min-height: 190px;
+        }
+       }
+
+       .form-btn{
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       background: #ddd;
+       font-size: 17px;
+       border: none;
+       cursor: pointer;
+       }
+
+       .form-btn :hover {
+        background-color: #04AA6D;
+       }
+       .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+        margin-left: 100px;
+        margin-right: 400px;
+        margin-top: 20px;
+        
+       }
+
+       .text-head {
+        font-size: 20px;
+        background-color: #04AA6D;
+        border: 1px solid #ccc;
+        color: white;
+        padding-left: 10px;
+        margin-top: 20px;
+       }
+       
+       .text-border {
+        border: 1px solid #ddd;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+       }
+
+       .text-background {
+        background-color: #ddd;
+        position: relative;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding:10px;
+       }
+
+       #nav-table {
+        font-family: 'Times New Roman', Times, serif;
+        border-collapse: collapse;
+       }
+
+       #nav-table td, #nav-table th{
+        border: 1px solid #ddd;
+        padding: 10px;
+       }
+
+       #nav-table th {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+       }
+
+       #nav-table tr:hover {
+        background-color: #ddd;
+       }
+
+       #table {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        font-size: 12px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+       }
+
+       #table td, #table th {
+       border: 1px solid #ddd;
+       padding: 10px;
+       }
+
+       #table tr:hover {
+        background-color: #ddd;
+       }
+
+       #table th {
+       padding-top: 12px;
+       padding-bottom: 12px;
+       text-align: left;
+       background-color: #04AA6D;
+       color: white;
+       }
+       
+       .end-section {
+        background-color: black;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+       }
+
+       .end-details {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: small;
+        color: white;
+        margin-top: 20px;
+
+       }
+
+    </style>
+</head>
+<body>
+    <div class="form-btn" style="float: right;">
+        <a href="signup.html">Sign Up</a>
+    </div>
+    <div class="form-btn">
+    </div>
+    <p style="background-color:teal"><img src="Maulana-Azad-National-Institute-of-Technology-Logo.png" style="width: 800px; height:200px; margin-left: 50px;"></p>
+    <div class="dropdwn">
+        <button class="dropbtn">Home</button>
+        <div class="dropdwn-content">
+        <a href="History.html">History</a>
+        <a href="About_Us.html">About Us</a>
+        <a href="Mission_Vision_&_Goal.html">Mission Vision & Goal</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Academics</button>
+        <div class="dropdwn-content">
+            <a href="Academics_programmes.html">Academics Programmes</a>
+            <a href="Ordinance.html">Ordinance</a>
+            <a href="UG_PG_Schemes.html">UG PG Schemes</a>
+            <a href="Admission_Registration.html">Admission/Registration</a>
+            <a href="Examination_section.html">Examination Section</a>
+            <a href="Time_table.html">Time Table</a>
+            <a href="Scholarship.html">Scholarship</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Departments</button>
+        <div class="dropdwn-content">
+            <a href="Architecture_&_planning.html">Architecture & Planning</a>
+            <a href="Engineering.html">Engineering</a>
+            <a href="Science.html">Science</a>
+            <a href="Humanities.html">Humanities</a>
+            <a href="Management_Studies.html">Management Studies</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Student Zone</button>
+        <div class="dropdwn-content">
+            <a href="Professional_Club.html">Professional Club</a>
+            <a href="Literacy_Club.html">Literacy Club</a>
+            <a href="Technical_Club.html">Technical Club</a>
+            <a href="Cultural_Club.html">Cultural Club</a>
+            <a href="Social_committee.html">Social Committee</a>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="search-container">
+            <form action="MANIT">
+            <input type="text" placeholder="Search......." name="search">
+             <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="inner-top-banner"></div>
+    <h1 style="text-align: center; background-color: #333; color: #ccc;">Humanities Department</h1>
+    <div style="float: right;">
+        <table id="nav-table" style="margin-right: 50px; margin-top: 10px; width: 300px;">
+            <tr><th><h3>Departments</h3></th></tr>
+            <tr><td><a href="Architecture_&_planning.html" style="text-decoration: none;">Architecture & Planning</a></td></tr>
+            <tr><td><a href="Engineering.html" style="text-decoration: none;">Engineering</td></tr>
+            <tr><td><a href="Science.html" style="text-decoration: none;">Science</a></td></tr>
+            <tr><td><a href="Humanities" style="text-decoration: none;">Humanities</a></td></tr>
+            <tr><td><a href="Management_Studies.html" style="text-decoration: none;">Management Studeies</a></td></tr>
+        </table> 
+    </div>
+
+    <div class="text">
+        <div class="text-head">
+            <p><b>Home/About the Department</b></p>
+        </div>
+        <div class="text-border">
+            <div class="text-background">
+                <p>Humanities and Social Sciences is a multi-disciplinary department catering to the different departments of the institute. It offers undergraduate and post graduate courses to engineering students, it also runs full time doctoral programmes in Humanities and Social Sciences. Since its inception in 1960, it is striving to impart character building education and inner strength synchronous with futuristic requirement.</p>
+            </div>
+        </div>
+
+        <div class="text-head">
+            <p><b>Vision</b></p>
+        </div>
+        <div class="text-border">
+            <div class="text-background">
+                <p>To strive for communication and career enhancement for both graduate and post graduate students and serve as a valuable resource to the nation.</p>
+            </div>
+        </div>
+
+        <div class="text-head">
+            <p><b>Mission</b></p>
+        </div>
+        <div class="text-border">
+            <div class="text-background">
+                <ul>
+                    <li>To bring the graduating engineers and professionals at par with the expected standards of the corporate world.</li>
+                    <li>To develop full potential and inoculate engineers with ethics and moral values.</li>
+                    <li>To emerge as a leader in communication and suggest innovative methods of teaching.</li>
+                </ul>
+                <p><b>Programme Educational Objectives</b></p>
+                <ul>
+                    <li>Enhancement of facilities in the department for advance research and to impart advanced knowledge to the student community.</li>
+                    <li>Preparing the students to deal with the current challenges in the communication towards development of nation and upliftment of society</li>
+                    <li>Communication enhancement schemes for rural students</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-head">
+            <p><b>Course</b></p>
+        </div>
+        <div class="text-border">
+            <div class="text-background">
+                <p><b>B.Tech</b></p>
+                <ul>
+                    <li>Oral & Written Communication Skills.</li>
+                    <li>Intellectual Property Rights.</li>
+                    <li>Oragnisational Behaviour.</li>
+                    <li>Engineering Economics Project Management.</li>
+                </ul>
+                <p><b>Ph.D</b></p>
+                <ul><li>Full Time</li></ul>
+                <p><b>M.Tech/ M.Plan</b></p>
+                <ul>
+                    <li>Engineering Economics & Project Management.</li>
+                    <li>Urban Economics & Sociology.</li>
+                </ul>
+                <p>Subjects pertaining to English Literature, Social Sciences and Public Administration.</p>
+            </div>
+        </div>
+        <div class="text-head">
+            <p><b>Research Groups</b></p>
+        </div>
+        <div class="text-border">
+            <p><b>Area: The Department offers the following research area for Ph.D. students</b></p>
+            <table id="table">
+                <tr>
+                    <th>Faculty Name</th>
+                    <th>Research Activities</th>
+                </tr>
+                <tr>
+                    <td>Dr. Vinita Mohindra</td>
+                    <td>English Literature, Intellectual Property Rights, Business Communication</td>
+                </tr>
+                <tr>
+                    <td>Dr Shuchi Srivastava</td>
+                    <td>English Literature, American Literature, Spoken English, Public Speaking, Communication Skills, Presentation Skills.</td>
+                </tr>
+                <tr>
+                    <td>Dr Puspender Yadav</td>
+                    <td>Social Security, Pension Reforms, Rural & Urban Development, Human Resource</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="text-head">
+            <p><b>Event/News</b></p>
+        </div>
+        <div class="text-border">
+            <table id="table">
+                <tr>
+                    <th>Sr.NO.</th>
+                    <th>Title of Workshop/Training program/Summer/Winter School</th>
+                    <th>Duration and Place</th>
+                    <th>Coordinators</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>One week interdisciplinary Short Term Training Program on "IP Procedure, Patent Drafting and Commercialization" (Under TEQIP II) from</td>
+                    <td>15 October -19 October, 2016 MANIT, Bhopal</td>
+                    <td>Dr Vinita Mohindra</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>One Day Faculty Development Program on Professional Ethics and Human Values</td>
+                    <td>2 March, 2016, MANIT, Bhopal</td>
+                    <td>Dr Vinita Mohindra</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>ISTE Short Term Training Programme on Technical Communication</td>
+                    <td>8 October to 5 December 2015 MANIT, Bhopal</td>
+                    <td>Dr Vinita Mohindra
+
+                        IIT Bombay under National Mission on Education through ICT (MHRD)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Soft Skills For Interviews</td>
+                    <td>21-22 March 2015 MANIT, Bhopal</td>
+                    <td>Dr Shuchi Srivastava</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Five days Short Term Training Program on IPR Issues: Patent Drafting and Processing of Patent Application</td>
+                    <td>14 March -18 March, 2015 MANIT, Bhopal</td>
+                    <td>Dr Vinita Mohindra</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Five days Short Term Training Program on Applications of SPSS in Multidisciplinary Research</td>
+                    <td>02 January -06 January, 2015 MANIT, Bhopal</td>
+                    <td>Dr Vinita Mohindra</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Five days Short Term Training Program on Research Methodology and Applications of SPSS in Multidisciplinary Research</td>
+                    <td>04 January -08 January, 2015 MANIT, Bhopal</td>
+                    <td>Dr Vinita Mohindra</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Professional Communication</td>
+                    <td>Professional Communication</td>
+                    <td>Dr Vinita Mohindra
+
+                        Dr Shuchi Srivastava
+                        
+                        Dr Pushpender Yadav</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Five days Short Term Training Program on Research Technique and Applications of SPSS</td>
+                    <td>29 July -02 August, 2013, MANIT, Bhopal</td>
+                    <td>Dr Vinita Mohindra</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Business Communication</td>
+                    <td>24-28 June 2013 MANIT, Bhopal</td>
+                    <td>Dr Shuchi Srivastava
+
+                        Dr Pushpender Yadav</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

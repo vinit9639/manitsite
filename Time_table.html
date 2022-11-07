@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <link rel="icon" type="image/x-icon" href="MANIT LOGO.png" >
+    <style>
+      a {
+            text-decoration: none;
+        }
+
+       .navbar {
+        overflow: hidden;
+        background-color: #333;
+       }
+
+       .navbar a{
+        float: left;
+        display: block;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+       }
+       
+       .dropdwn {
+        float: left;
+        overflow: hidden;
+        background-color: #333;
+       }
+       
+       .dropdwn .dropbtn{
+        font-size: medium;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+       }
+       
+       .navbar a:hover, .dropdwn:hover, .dropbtn {
+        background-color: red;
+       }
+
+       .dropdwn-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+       }
+       
+       .dropdwn-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+       }
+       
+       .dropdwn-content a:hover {
+        background-color: #ddd;
+       }
+
+       .dropdwn:hover .dropdwn-content {
+        display: block;
+       }
+
+       .navbar .search-container {
+       float: right;
+       }
+
+       .navbar input[type=text] {
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       border: none;
+       font-size: 17px;
+       }
+
+       .navbar .search-container button {
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       background: #ddd;
+       font-size: 17px;
+       border: none;
+       cursor: pointer;
+       }
+
+       .navbar .search-container button:hover {
+       background: #ccc;
+       }
+
+       @media screen and (max-width: 600px) {
+       .navbar a, .navbar input[type=text], .navbar .search-container button {
+       float: none;
+       display: block;
+       text-align: left;
+       width: 100%;
+       margin: 0;
+       padding: 14px;
+        }
+       }
+       .navbar input[type=text] {
+       border: 1px solid #ccc;  
+       }
+
+       .inner-top-banner {
+        color: black;
+        background: url("https://images.shiksha.com/mediadata/images/1515656470php9JdBKt.jpeg");
+        background-size: 100% 100%;
+        min-height: 300px;
+       }
+
+       @media (max-width: 1024px) and (min-width:768px) {
+        .inner-top-banner {
+            min-height: 190px;
+        }
+       }
+
+       .form-btn{
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       background: #ddd;
+       font-size: 17px;
+       border: none;
+       cursor: pointer;
+       }
+
+       .form-btn :hover {
+        background-color: #04AA6D;
+       }
+
+       #nav-table {
+        font-family: 'Times New Roman', Times, serif;
+        border-collapse: collapse;
+       }
+
+       #nav-table td, #nav-table th{
+        border: 1px solid #ddd;
+        padding: 10px;
+       }
+
+       #nav-table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+       }
+
+       #nav-table tr:hover {
+        background-color: #ddd;
+       }
+
+       .table {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        font-size: 15px;
+        margin-left: 100px;
+        margin-right: 400px;
+        width: 700px;
+       }
+
+       .table td, .table th{
+       border: 1px solid #ddd;
+       padding: 10px;
+       width: 700px;
+       padding-left: 20px;
+       }
+
+       .table th {
+       padding-top: 12px;
+       padding-bottom: 12px;
+       text-align: left;
+       background-color: #04AA6D;
+       color: white;
+       width: 700px;
+       text-align: center;
+       font-size: 25px;
+       }
+
+       .table td:hover {
+        background-color:#ddd;
+       }
+
+       
+       .end-section {
+        background-color: black;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+       }
+
+       .end-details {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: small;
+        color: white;
+        margin-top: 20px;
+
+       }
+
+    </style>
+</head>
+<body>
+  <div class="form-btn" style="float: right;">
+    <a href="signup.html">Sign Up</a>
+</div>
+<div class="form-btn">
+    <a href="login.html">Login</a>
+</div>
+    <p style="background-color:teal"><img src="Maulana-Azad-National-Institute-of-Technology-Logo.png" style="width: 800px; height:200px; margin-left: 50px;"></p>
+    <div class="dropdwn">
+        <button class="dropbtn">Home</button>
+        <div class="dropdwn-content">
+        <a href="History.html">History</a>
+        <a href="About_Us.html">About Us</a>
+        <a href="Mission_Vision_&_Goal.html">Mission Vision & Goal</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Academics</button>
+        <div class="dropdwn-content">
+            <a href="Academics_programmes.html">Academics Programmes</a>
+            <a href="UG_PG_Schemes.html">UG PG Schemes</a>
+            <a href="Admission_Registration.html">Admission/Registration</a>
+            <a href="Examination_section.html">Examination Section</a>
+            <a href="Time_table.html">Time Table</a>
+            <a href="Scholarship.html">Scholarship</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Departments</button>
+        <div class="dropdwn-content">
+            <a href="Architecture_&_planning.html">Architecture & Planning</a>
+            <a href="Engineering.html">Engineering</a>
+            <a href="Science.html">Science</a>
+            <a href="Humanities.html">Humanities</a>
+            <a href="Management_Studies.html">Management Studies</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Student Zone</button>
+        <div class="dropdwn-content">
+            <a href="Professional_Club.html">Professional Club</a>
+            <a href="Literacy_Club.html">Literacy Club</a>
+            <a href="Technical_Club.html">Technical Club</a>
+            <a href="Cultural_Club.html">Cultural Club</a>
+            <a href="Social_committee.html">Social Committee</a>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="search-container">
+            <form action="MANIT">
+            <input type="text" placeholder="Search......." name="search">
+             <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="inner-top-banner"></div>
+    <h1 style="text-align: center; background-color: #333; color: #ccc;">TIME TABLE FOR CLASSES AND EXAMINATION</h1>
+    <div style="float: right;">
+        <table id="nav-table" style="margin-right: 50px; margin-top: 10px; width: 300px;">
+            <tr><th>Quick Links</th></tr>
+            <tr><td>Registration/Examination</td></tr>
+            <tr><td>Academics Calendar</td></tr>
+            <tr><td>House Allotment</td></tr>
+            <tr><td>Internal Complaints Committee (ICC)</td></tr>
+            <tr><td>ARIIA 2021</td></tr>
+            <tr><td>aculty Recruitment 2021</td></tr>
+            <tr><td>Innovation</td></tr>
+            <tr><td>Space Technology Incubation Centre</td></tr>
+            <tr><td>MCA/NIMCET 2022</td></tr>
+            <tr><td>Notices for Recruitment Drive</td></tr>
+            <tr><td>Non-Teaching Recruitment</td></tr>
+            <tr><td>NIRF</td></tr>
+            <tr><td>Holiday 2022</td></tr>
+            <tr><td>MANIT Web Services</td></tr>
+            <tr><td>Unnat Bharat Abhiyan</td></tr>
+        </table>
+    </div>
+    <div class="table">
+        <table>
+            <tr><td>Schedule For IInd Sem .B.Tech /B.Tech - M.Tech (Dual Degree) Mid Term Examinations May-2022 </td></tr>
+            <tr><td>Schedule For IInd Sem .B.Plan /B.Arch. Mid Term Examinations May-2022 </td></tr>
+            <tr><td>Summer Time Table for B.Tech. II Sem Jan-June 2022 </td></tr>
+            <tr><td>Energy Centre Time Table (RE and SM) II Semester End-Term Exam April-May-2022 </td></tr>
+            <tr><td>Time Table End Term Exam April 2022 (B. Arch IV Semester, B. Arch VI Semester, B. Arch VIII Semester ) </td></tr>
+            <tr><td>Time Table End Term Exam April 2022 (M. Plan, Urban Planning, II Semester, Ph.D, I Semester) </td></tr>
+            <tr><td>Time Table End Term Exam April 2022 (B. Plan, IV Semester, B. Plan, VI Semester, B. Plan, VIII Semester) </td></tr>
+            <tr><td>Schedule For Even Semester End Term Examinations, April 2022  </td></tr>
+            <tr><td>Schedule for 1 Sem. B.Tech./ B.Plan./ B.Arch. & Dual Degree End Term Examinations, March-2022 (All Regular and .Ex.) </td></tr>
+            <tr><td>Time Table for Mechanical Engineering End-Term Exam B.Tech 1st Semester  March 2022   </td></tr>
+        </table>
+    </div>
+    
+</body>
+</html>

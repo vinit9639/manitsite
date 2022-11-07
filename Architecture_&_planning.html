@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture & Planning</title>
+    <link rel="icon" type="image/x-icon" href="MANIT LOGO.png" >
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+       .navbar {
+        overflow: hidden;
+        background-color: #333;
+       }
+
+       .navbar a{
+        float: left;
+        display: block;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+       }
+       
+       .dropdwn {
+        float: left;
+        overflow: hidden;
+        background-color: #333;
+       }
+       
+       .dropdwn .dropbtn{
+        font-size: medium;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+       }
+       
+       .navbar a:hover, .dropdwn:hover, .dropbtn {
+        background-color: red;
+       }
+
+       .dropdwn-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+       }
+       
+       .dropdwn-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+       }
+       
+       .dropdwn-content a:hover {
+        background-color: #ddd;
+       }
+
+       .dropdwn:hover .dropdwn-content {
+        display: block;
+       }
+
+       .navbar .search-container {
+       float: right;
+       }
+
+       .navbar input[type=text] {
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       border: none;
+       font-size: 17px;
+       }
+
+       .navbar .search-container button {
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       background: #ddd;
+       font-size: 17px;
+       border: none;
+       cursor: pointer;
+       }
+
+       .navbar .search-container button:hover {
+       background: #ccc;
+       }
+
+       @media screen and (max-width: 600px) {
+       .navbar a, .navbar input[type=text], .navbar .search-container button {
+       float: none;
+       display: block;
+       text-align: left;
+       width: 100%;
+       margin: 0;
+       padding: 14px;
+        }
+       }
+
+       .navbar input[type=text] {
+       border: 1px solid #ccc;  
+       }
+
+       .inner-top-banner {
+        color: black;
+        background: url("https://images.shiksha.com/mediadata/images/1515656470php9JdBKt.jpeg");
+        background-size: 100% 100%;
+        min-height: 300px;
+       }
+
+       @media (max-width: 1024px) and (min-width:768px) {
+        .inner-top-banner {
+            min-height: 190px;
+        }
+       }
+
+       .form-btn{
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       background: #ddd;
+       font-size: 17px;
+       border: none;
+       cursor: pointer;
+       }
+
+       .form-btn :hover {
+        background-color: #04AA6D;
+       }
+
+       .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+        margin-left: 100px;
+        margin-right: 400px;
+        margin-top: 20px;
+       }
+
+       .text-head {
+        font-size: 20px;
+        background-color: #04AA6D;
+        border: 1px solid #ccc;
+        color: white;
+        padding-left: 10px;
+       }
+       
+       .text-border {
+        border: 1px solid #ddd;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+       }
+
+       #nav-table {
+        font-family: 'Times New Roman', Times, serif;
+        border-collapse: collapse;
+       }
+
+       #nav-table td, #nav-table th{
+        border: 1px solid #ddd;
+        padding: 10px;
+       }
+
+       #nav-table th {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+       }
+
+       #nav-table tr:hover {
+        background-color: #ddd;
+       }
+
+       #table {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        font-size: 12px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+       }
+
+       #table td, #table th {
+       border: 1px solid #ddd;
+       padding: 10px;
+       }
+
+       #table tr:hover {
+        background-color: #ddd;
+       }
+
+       #table th {
+       padding-top: 12px;
+       padding-bottom: 12px;
+       text-align: left;
+       background-color: #04AA6D;
+       color: white;
+       }
+
+       
+       .end-section {
+        background-color: black;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        margin-top: 100px;
+       }
+
+       .end-details {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: small;
+        color: white;
+        margin-top: 20px;
+
+       }
+       
+    </style>
+</head>
+<body>
+    <div class="form-btn" style="float: right;">
+        <a href="signup.html">Sign Up</a>
+    </div>
+    <div class="form-btn">
+    </div>
+    <p style="background-color:teal;"><img src="Maulana-Azad-National-Institute-of-Technology-Logo.png" style="width: 800px; height:200px; margin-left: 50px; " ></p>
+    <div class="dropdwn">
+        <button class="dropbtn">Home</button>
+        <div class="dropdwn-content">
+        <a href="History.html">History</a>
+        <a href="About_Us.html">About Us</a>
+        <a href="Mission_Vision_&_Goal.html">Mission Vision & Goal</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Academics</button>
+        <div class="dropdwn-content">
+            <a href="Academics_programmes.html">Academics Programmes</a>
+            <a href="UG_PG_Schemes.html">UG PG Schemes</a>
+            <a href="Admission_Registration.html">Admission/Registration</a>
+            <a href="Examination_section.html">Examination Section</a>
+            <a href="Time_table.html">Time Table</a>
+            <a href="Scholarship.html">Scholarship</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Departments</button>
+        <div class="dropdwn-content">
+            <a href="Architecture_&_planning.html" style="text-decoration: none;">Architecture & Planning</a>
+            <a href="Engineering.html" style="text-decoration: none;">Engineering</a>
+            <a href="Science.html" style="text-decoration: none;">Science</a>
+            <a href="Humanities.html" style="text-decoration: none;">Humanities</a>
+            <a href="Management_Studies.html" style="text-decoration: none;">Management Studies</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Student Zone</button>
+        <div class="dropdwn-content">
+            <a href="Professional_Club.html">Professional Club</a>
+            <a href="Literacy_Club.html">Literacy Club</a>
+            <a href="Technical_Club.html">Technical Club</a>
+            <a href="Cultural_Club.html">Cultural Club</a>
+            <a href="Social_committee.html">Social Committee</a>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="search-container">
+            <form action="MANIT">
+            <input type="text" placeholder="Search......." name="search">
+             <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="inner-top-banner"></div>
+    <h1 style="text-align: center; background-color: #333; color: #ccc;">Architecture & Planning</h1>
+    <div style="float: right;">
+        <table id="nav-table" style="margin-right: 50px; margin-top: 10px; width: 300px;">
+            <tr><th><h3>Departments</h3></th></tr>
+            <tr><td><a href="Architecture_&_planning.html" style="text-decoration: none;">Architecture & Planning</a></td></tr>
+            <tr><td><a href="Engineering.html" style="text-decoration: none;">Engineering</td></tr>
+            <tr><td><a href="Science.html" style="text-decoration: none;">Science</a></td></tr>
+            <tr><td><a href="Humanities" style="text-decoration: none;">Humanities</a></td></tr>
+            <tr><td><a href="Management_Studies.html" style="text-decoration: none;">Management Studeies</a></td></tr>
+        </table>  
+    </div>
+
+    <div class="text">
+        <div class="text-head">
+            <p><b>Home/About the Department</b></p>
+        </div>
+        <div class="text-border">
+        <p style="font-size: 18px;"><b>Profile(History):</b></p>
+        <p>
+            The Department of Architecture and Planning, MANIT Bhopal has been engaged in imparting Architecture education 
+            for more than 54 years. The B. Architecture degree program was established in the year 1963 with an intake of 15 students. 
+            The current intake in the B. Architecture programme is 80 students. In the year 1992, a Post Graduate course in Urban Development
+             Planning was also started in the Department. Currently two Post Graduate M. Planning programmes are running in the Department, 
+             one with the specialization of Urban planing and one with the specialization of Housing having an intake of 18 students in each 
+             branch.
+        </p>
+        <p>
+            In tune with the reputation of being a pioneering institution in Central India, the Department of Architecture and 
+            Planning in 2007 introduced a Bachelor of Planning programme with an annual intake of 40 students. This programme aimed at
+             meeting the variety of emerging needs of physical planning in the country.
+        </p>
+        <p>
+            Apart from these Undergraduate and Post-Graduation courses, more than 43 Doctoral degrees on 
+            various areas have been awarded by the Institute from the Department, whereas about 21 Doctoral 
+            researches are currently undergoing in the Department.
+        </p>
+        <p>
+            Nearly all the graduates from the Department either get a decent placement opportunity by both on/off campus placement procedures, or go on to pursue the higher studies 
+            in reputed national and international universities. Some of the alumni are also serving as academicians in various national and 
+            international level institutions.
+        </p>
+        <p>
+            The various educational programmes running in the Department prepare the students for professional careers in the design of 
+            human settlements in harmony with the natural environment and the needs of society. They can deal with the use of land, housing,
+             transportation, public facilities, and open space.
+        </p>
+        </div>
+    </div>
+
+    <div class="text">
+        <div class="text-head">
+            <p><b>Vision</b></p>
+        </div>
+        <div class="text-border">
+            <p style="font-size: 18px;"><b>Vision</b></p>
+            <ul>
+                <li>Promoting creative thinking and novelty/ originality of ideas especially at early stages</li>
+                <li>Designing for changing social, economic and market trends</li>
+                <li>Continuous updating of knowledge & curriculum for changes and forces of the market</li>
+                <li>Sensitizing students for contemporary global issues</li>
+                <li>Special emphasis on user concerned issues in building design</li>
+                <li>Creation of an awareness of the context in which urban planning and development operate</li>
+                <li>Addressing planning and development approaches for constructively influencing the community and the physical environment</li>
+                <li>Developing skills in policy formulation, research and evaluation, design and communication</li>
+                <li>Finding the means to create a better and more sustainable future by ensuring proper budgeting for public projects and programs and by reviewing and regulating private development</li>
+            </ul>
+        </div>
+    </div>
+           
+    <div class="text">
+        <div class="text-head">
+            <p><b>Mission</b></p>
+        </div>
+        <div class="text-border">
+            <p style="font-size: 18px;"><b>Mission:</b></p>
+            <p>
+                To enrich the society by providing architects and planners of highest quality, comparable to 
+                the very best in the world, who would take leadership to promote, disseminate, develop and 
+                transfer technology for the overall development of the society.
+            </p>
+        </div>
+    </div>
+
+    <div class="text">
+        <div class="text-head">
+            <p><b>Course</b></p>
+        </div>
+        <div class="text-border">
+            <p style="font-size: 18px;"><b>B. Architecture</b></p>
+            <ol type="1">
+                <li>New B Arch Scheme</li>
+                <li>New Syllabus</li>
+                <li>Scheme and Syllabus</li>
+            </ol>
+            <p style="font-size: 18px;"><b>B. Plan</b></p>
+            <ol type="1">
+                <li>B Plan Scheme</li>
+                <li>New Syllabus</li>
+                <li>Scheme and Syllabus</li>
+            </ol>
+            <p style="font-size: 18px;"><b>M. Planning</b></p>
+            <p style="font-size: 18px;"><b>Department of Architecture and Planning</b></p>
+            <ol type="1">
+                <li>M. Plan URBAN PLANNING and HOUSING</li>
+                <li>New Scheme for M.Plan in Housing</li>
+                <li>New Syllabus MPlan Housing</li>
+                <li>New Syllabus MPlan Urban</li>
+                <li>New Scheme for M.Plan in Urban development</li>
+                <li>Scheme and Syllabus</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="text">
+        <div class="text-head">
+            <p><b>Research Groups</b></p>
+        </div>
+        <div class="text-border">
+            <ol>
+                <li>SUSTAINABLE  BUILT ENVIRONMENT</li>
+                <li>ENERGY EFFCIENT ARCHITECTURE</li>
+                <li>VEDIC & VASTU  ARCHITECTURE</li>
+                <li>URBAN CONSERVATION & RENEWAL</li>
+                <li>CLIMATE CHANGE</li>
+                <li>INCLUSIVE PLANNING</li>
+                <li>TRANSPORTATION</li>
+                <li>LANDSCAPE ARCHITECTURE</li>
+                <li>INDIAN SYSTEM OF ARCHITECTURE</li>
+                <li>ARCHITECTURAL  HERITAGE</li>
+                <li>DISASTER  MANAGEMENT</li>
+                <li>ARCHITECTURE FOR  HEALTH FACILITIES</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="text">
+        <div class="text-head">
+            <p><b>Projects/patent/consultant</b></p>
+        </div>
+        <div class="text-border">
+            <table id="table">
+                <tr>
+                    <th>NAME OF SPONSORING AGENCY</th>
+                    <th>PROJECT TITLE</th>
+                    <th>INVESTIGATOR</th>
+                </tr>
+                <tr>
+                    <td>M.P Council of Science and Technology, Bhopal</td>
+                    <td>Scientific Validation of Sustainable Practices of Tribal Settlements of Madhya Pradesh (2.32 Lacs)</td>
+                    <td>Dr. KK Dhote, Dr. Preeti Onkar</td>
+                </tr>
+                <tr>
+                    <td>Human Settlement Management Institution</td>
+                    <td>Social Implication  Assessment Framework for BSUP Programme (9.74 lacs)</td>
+                    <td>Dr. KK Dhote, Dr. Preeti Onkar</td>
+                </tr>
+                <tr>
+                    <td>Moderanization of Facilities of Environrmental Science Laboratory</td>
+                    <td>MHRD Govt of India New Delhi (3 lacs)</td>
+                    <td>Dr. Anupama Sharma</td>
+                </tr>
+                <tr>
+                    <td>Monitoring of Urban Development on Fringe Areas using Remote Sensing Techniques</td>
+                    <td>Centre of Excellence</td>
+                    <td>Dr. Anupama Sharma</td>
+                </tr>
+            </table>
+
+            <table id="table" >
+                <tr>
+                    <th>Consolidated Details of Consultancy Projects taken by the Department</th>
+                    <th>No. of   Projects taken under each Head</th>
+                    <th>Project Amount</th>
+                </tr>
+                <tr>
+                    <td>Architectural Consultancy</td>
+                    <td>22+</td>
+                    <td>7 crore +</td>
+                </tr>
+                <tr>
+                    <td>Planning Consultancy 2015-2016</td>
+                    <td>5+</td>
+                    <td>20 lacs +</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="text">
+        <div class="text-head">
+            <p><b>Event/News</b></p>
+        </div>
+        <div class="text-border">
+            <table id="table">
+                <tr>
+                    <th>SN</th>
+                    <th>Seminar /conference/ workshop</th>
+                    <th>Yera</th>
+                    <th>Students Appeared</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Student Workshop on 'Smart City Interventions', a part of Design Yatra</td>
+                    <td>6 February 2017</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Workshop on 'Tribal Art' by nationally acclaimed Artist Yashwant Singh</td>
+                    <td>26 October 2016</td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Workshop on 'Autodesk Revit'</td>
+                    <td>23 September 2016</td>
+                    <td>75</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Workshop by Ar. Vinay Shrivastava on ‘Technicalities in High Rise Buildings’</td>
+                    <td>30 August 2016</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Workshop on ‘International Etiquettes and Personality Grooming’ by Dr. Vinita Beohar</td>
+                    <td>5 August 2016</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Guest lecture by Ar. Mary Norman Woods, Professor, Cornell University</td>
+                    <td>9 January 2016</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Seminar on ‘Preservation of Heritage’, Kailash Palace</td>
+                    <td>1 October 2015</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Two day Workshop on "Transformation in Profession" by the Department of Architecture and Planning, MANIT Bhopal by Prof. Uday Gadkari, COA President </td>
+                    <td>22-Sept 2015</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Guest lecture by Ar. Hafeez Contractor, Mumbai on ‘Alternate Structure System for High Rise Buildings and Net Zero Energy Building’</td>
+                    <td>22 August 2015</td>
+                    <td>250</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Seminar by Internationally acclaimed Ar. Marshall Strabala on ‘Performance Design Guest Lecture’</td>
+                    <td>1 March 2015</td>
+                    <td>200</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html> 

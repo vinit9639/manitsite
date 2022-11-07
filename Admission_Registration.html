@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Section</title>
+    <link rel="icon" type="image/x-icon" href="MANIT LOGO.png" >
+    <style>
+        a {
+            text-decoration: none;
+        }
+       .navbar {
+        overflow: hidden;
+        background-color: #333;
+       }
+
+       .navbar a{
+        float: left;
+        display: block;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+       }
+       
+       .dropdwn {
+        float: left;
+        overflow: hidden;
+        background-color: #333;
+       }
+       
+       .dropdwn .dropbtn{
+        font-size: medium;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+       }
+       
+       .navbar a:hover, .dropdwn:hover, .dropbtn {
+        background-color: red;
+       }
+
+       .dropdwn-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+       }
+       
+       .dropdwn-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+       }
+       
+       .dropdwn-content a:hover {
+        background-color: #ddd;
+       }
+
+       .dropdwn:hover .dropdwn-content {
+        display: block;
+       }
+
+       .navbar .search-container {
+       float: right;
+       }
+
+       .navbar input[type=text] {
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       border: none;
+       font-size: 17px;
+       }
+
+       .navbar .search-container button {
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       background: #ddd;
+       font-size: 17px;
+       border: none;
+       cursor: pointer;
+       }
+
+       .navbar .search-container button:hover {
+       background: #ccc;
+       }
+
+       @media screen and (max-width: 600px) {
+       .navbar a, .navbar input[type=text], .navbar .search-container button {
+       float: none;
+       display: block;
+       text-align: left;
+       width: 100%;
+       margin: 0;
+       padding: 14px;
+        }
+       }
+       .navbar input[type=text] {
+       border: 1px solid #ccc;  
+       }
+
+       .inner-top-banner {
+        color: black;
+        background: url("https://images.shiksha.com/mediadata/images/1515656470php9JdBKt.jpeg");
+        background-size: 100% 100%;
+        min-height: 300px;
+       }
+
+       @media (max-width: 1024px) and (min-width:768px) {
+        .inner-top-banner {
+            min-height: 190px;
+        }
+       }
+
+       .form-btn{
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       background: #ddd;
+       font-size: 17px;
+       border: none;
+       cursor: pointer;
+       }
+
+       .form-btn :hover {
+        background-color: #04AA6D;
+       }
+
+       #nav-table {
+        font-family: 'Times New Roman', Times, serif;
+        border-collapse: collapse;
+       }
+
+       #nav-table td, #nav-table th{
+        border: 1px solid #ddd;
+        padding: 10px;
+       }
+
+       #nav-table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+       }
+
+       #nav-table tr:hover {
+        background-color: #ddd;
+       }
+
+       .table {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        font-size: 15px;
+        margin-left: 100px;
+        margin-right: 400px;
+        width: 700px;
+       }
+
+       .table td, .table th{
+       border: 1px solid #ddd;
+       padding: 10px;
+       width: 700px;
+       padding-left: 20px;
+       background-color: #ccc;
+       color: #333;
+       }
+
+       .table th {
+       padding-top: 12px;
+       padding-bottom: 12px;
+       text-align: left;
+       background-color: #04AA6D;
+       color: white;
+       width: 700px;
+       text-align: center;
+       font-size: 25px;
+       }
+
+       .table td:hover {
+        background-color: white;
+       }
+
+       .p {
+        font-size: 20px;
+        margin-left: 100px;
+       }
+
+       .end-section {
+        background-color: black;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+       }
+
+       .end-details {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: small;
+        color: white;
+        margin-top: 20px;
+
+       }
+       
+    </style>
+</head>
+<body>
+    <div class="form-btn" style="float: right;">
+        <a href="signup.html">Sign Up</a>
+    </div>
+    <div class="form-btn">
+           </div>
+    <p style="background-color:teal"><img src="Maulana-Azad-National-Institute-of-Technology-Logo.png" style="width: 800px; height:200px; margin-left: 50px;"></p>
+    <div class="dropdwn">
+        <button class="dropbtn">Home</button>
+        <div class="dropdwn-content">
+        <a href="History.html">History</a>
+        <a href="About_Us.html">About Us</a>
+        <a href="Mission_Vision_&_Goal.html">Mission Vision & Goal</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Academics</button>
+        <div class="dropdwn-content">
+            <a href="Academics_programmes.html">Academics Programmes</a>
+            <a href="UG_PG_Schemes.html">UG PG Schemes</a>
+            <a href="Admission_Registration.html">Admission/Registration</a>
+            <a href="Examination_section.html">Examination Section</a>
+            <a href="Time_table.html">Time Table</a>
+            <a href="Scholarship.html">Scholarship</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Departments</button>
+        <div class="dropdwn-content">
+            <a href="Architecture_&_planning.html">Architecture & Planning</a>
+            <a href="Engineering.html">Engineering</a>
+            <a href="Science.html">Science</a>
+            <a href="Humanities.html">Humanities</a>
+            <a href="Management_Studies.html">Management Studies</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Student Zone</button>
+        <div class="dropdwn-content">
+            <a href="Professional_Club.html">Professional Club</a>
+            <a href="Literacy_Club.html">Literacy Club</a>
+            <a href="Technical_Club.html">Technical Club</a>
+            <a href="Cultural_Club.html">Cultural Club</a>
+            <a href="Social_committee.html">Social Committee</a>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="search-container">
+            <form action="MANIT">
+            <input type="text" placeholder="Search......." name="search">
+             <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="inner-top-banner"></div>
+    <h1 style="text-align: center; background-color: #333; color: #ccc;">ADMISSION SECTION</h1>
+    <div style="float: right;">
+    <table id="nav-table" style="margin-right: 100px; margin-top: 10px; width: 300px;">
+        <tr><th style="font-size: 20px;">Academics</th></tr>
+        <tr><td><a href="Academics_programmes.html" style="text-decoration: none;">Academics Programmes</a></td></tr>
+        <tr><td><a href="UG_PG_Schemes.html" style="text-decoration: none;">UG PG Schemes</a></td></tr>
+        <tr><td><a href="Admission_Registration.html" style="text-decoration: none;">Admission/Registration</a></td></tr>
+        <tr><td><a href="Examination_section.html" style="text-decoration: none;">Examination Section</a></td></tr>
+        <tr><td><a href="Time_table.html" style="text-decoration: none;">Time Table</a></td></tr>
+        <tr><td><a href="Scholarship.html" style="text-decoration: none;">Scholarship</a></td></tr>
+    </table>
+    </div>
+    <div class="p">
+        <p><b>JOSSA/CSAB/DASA 2022</b></p>
+    </div>
+    <div class="table">
+        <table>
+            <tr><td>DASA Admission Notice 2022 (B.Tech, B.Tech and M.Tech (Dual Degree) B.Arch /B.Plan)</td></tr>
+            <tr><td>Notice of Preference for Admission to MANIT Bhopal who has opted Freeze & Slide in JoSAA 2022</td></tr>
+            <tr><td>Important Notice of JoSAA (Online Payment of Partial Admission Fee)</td></tr>
+            <tr><td>B.Tech./B.Tech.-M.Tech.(Dual Degree)/B.Arch./B.Plan. Admission Notice 2022 & Academic Calendar 2022-23</td></tr>
+            <tr><td>B.Tech/B.Plan/B.Arch/Dual Degree (JOSAA)</td></tr>
+            <tr><td>B.Tech/B.Plan/B.Arch/Dual Degree (CSAB)</td></tr>
+            <tr><td>B.Tech/B.Plan/B.Arch/Dual Degree (DASA)</td></tr>
+        </table>
+    </div>
+    <div class="p">
+        <p><b>Fees Structure and Registration Notice for UG & PG/Ph.D</b></p>
+    </div>
+    <div class="table">
+        <table>
+            <tr><td>Fee Structure of MANIT Bhopal UG PG PhD Admission 2022-23</td></tr>
+            <tr><td>Fee Structure of MANIT Bhopal UG PG DASA SAARC & NON SAARC Admission 2022-23</td></tr>
+            <tr><td>Fee Structure For UG, PG & Ph.D (2022-23)</td></tr>
+            <tr><td>Fees Structure For Registration of Existing Students</td></tr>
+        </table>
+    </div>
+    <div class="p">
+        <p><b>Circular/Order/Notice</b></p>
+    </div>
+    <div class="table">
+        <table>
+            <tr><td>SBI Bank Loan For MANIT Students</td></tr>
+            <tr><td>INYAS-Saransh - Thesis Competition 2022 for PhD students</td></tr>
+            <tr><td>Academic Calendar 2022-23 for 1st Year UG & Dual Degree</td></tr>
+            <tr><td>Urgent Notice for Revised Academic Calendar for UG Oct.-Dec. 2022 (Dated:-10/10/2022)</td></tr>
+            <tr><td>ACADEMIC CALENDAR of FIRST YEAR PG & Ph.D 2022-23</td></tr>
+            <tr><td>Circular and Format for M Tech _ M Plan Students joining job before Completing the Programme</td></tr>
+            <tr><td>Cancellation of Admission After Joining the Institute (Admitted in 2020-21)</td></tr>
+            <tr><td>Office Order for Extension of Teaching Assistantship Beyond 3 Years for Ph.D. Students</td></tr>
+            <tr><td>M Tech M Plan Hardcopy Thesis Submission Important Notice</td></tr>
+            <tr><td>Order regarding award of consolidated mark sheet for the Students of 2020 year onwards</td></tr>
+            <tr><td>Ph.D. Thesis Submission for Research scholars</td></tr>
+            <tr><td>PG Internship Notice & Formats</td></tr>
+            <tr><td>Notice for M.Tech Thesis & form Submission by online mode</td></tr>
+            <tr><td>Notice Regarding M Tech / M Plan Thesis Submission</td></tr>
+            <tr><td>PNB Pratibha Scheme (Education Loan) for MANIT Students</td></tr>
+            <tr><td>SBI Scholar Laon Scheme for Premier Institutes</td></tr>
+            <tr><td>Requirement of Minimum 75% attendance during the semester.</td></tr>
+            <tr><td>Circular for Tuition Fee Concession</td></tr>
+            <tr><td>Introducation of SWAYAM/NPTEL Courses to B.Tech VIII Semester (All Branches)</td></tr>
+        </table>
+    </div>
+    <div class="p">
+        <p><b>Admission Committee</b></p>
+    </div>
+    <div class="table">
+        <table>
+            <tr><td>UG Admission Committee 2022</td></tr>
+            <tr><td>Chairman Admission Committee</td></tr>
+        </table>
+    </div>
+    <div class="p">
+        <p><b>Roll List 2022</b></p>
+    </div>
+    <div class="table">
+        <table>
+            <tr><td>MCA 2nd Semester Registration Roll List</td></tr>
+            <tr><td>MCA Admission 2022 Roll List (Section 2)</td></tr>
+            <tr><td>MCA Admission 2022 Roll List (Section 1)</td></tr>
+            <tr><td>MBA Admission 2022 Roll List</td></tr>
+            <tr><td>MCA Registration Roll List July 2022</td></tr>
+            <tr><td>MBA Registration Roll List July 2022</td></tr>
+            <tr><td>M.Tech Registration Roll List July 2022</td></tr>
+            <tr><td>M.Sc Registration Roll List July 2022</td></tr>
+            <tr><td>M.Plan Registration Roll List July 2022</td></tr>
+        </table>
+    </div>
+    <div class="p">
+        <p><b>Ph.D Admission 2022-23</b></p>
+    </div>
+    <div class="table">
+        <table>
+            <tr><td>Ph.D Thesis Submission for Research Scholars</td></tr>
+            <tr><td>Information Brochure for Ph.D Admission 2022-23</td></tr>
+        </table>
+    </div>
+    <div class="p">
+        <p><b>MBA/MA Admission 2022-23</b></p>
+    </div>
+    <div class="table">
+        <table>
+            <tr><td>Placement Status of MBA</td></tr>
+        </table>
+    </div>
+    <div class="p">
+        <p><b>CCMT/M.Tech/M.Plan 2022-23</b></p>
+    </div>
+    <div class="table">
+        <table>
+            <tr><td>Guidelines for M Tech / M Plan Thesis Evaluation</td></tr>
+            <tr><td>Department of Chemistry is Starting Two Year M.Sc. Chemistry Course for the Current academic Year 2021-2021</td></tr>
+        </table>
+    </div>
+    
+</body>
+</html>

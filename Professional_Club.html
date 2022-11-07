@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANIT</title>
+    <link rel="icon" type="image/x-icon" href="MANIT LOGO.png" >
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+       .navbar {
+        overflow: hidden;
+        background-color: #333;
+       }
+
+       .navbar a{
+        float: left;
+        display: block;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+       }
+       
+       .dropdwn {
+        float: left;
+        overflow: hidden;
+        background-color: #333;
+       }
+       
+       .dropdwn .dropbtn{
+        font-size: medium;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+       }
+       
+       .navbar a:hover, .dropdwn:hover, .dropbtn {
+        background-color: red;
+       }
+
+       .dropdwn-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+       }
+       
+       .dropdwn-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+       }
+       
+       .dropdwn-content a:hover {
+        background-color: #ddd;
+       }
+
+       .dropdwn:hover .dropdwn-content {
+        display: block;
+       }
+
+       .navbar .search-container {
+       float: right;
+       }
+
+       .navbar input[type=text] {
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       border: none;
+       font-size: 17px;
+       }
+
+       .navbar .search-container button {
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       background: #ddd;
+       font-size: 17px;
+       border: none;
+       cursor: pointer;
+       }
+
+       .navbar .search-container button:hover {
+       background: #ccc;
+       }
+
+       @media screen and (max-width: 600px) {
+       .navbar a, .navbar input[type=text], .navbar .search-container button {
+       float: none;
+       display: block;
+       text-align: left;
+       width: 100%;
+       margin: 0;
+       padding: 14px;
+        }
+       }
+       .navbar input[type=text] {
+       border: 1px solid #ccc;  
+       }
+
+       .inner-top-banner {
+        color: black;
+        background: url("https://images.shiksha.com/mediadata/images/1515656470php9JdBKt.jpeg");
+        background-size: 100% 100%;
+        min-height: 300px;
+       }
+
+       @media (max-width: 1024px) and (min-width:768px) {
+        .inner-top-banner {
+            min-height: 190px;
+        }
+       }
+
+       .form-btn{
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       background: #ddd;
+       font-size: 17px;
+       border: none;
+       cursor: pointer;
+       }
+
+       .form-btn :hover {
+        background-color: #04AA6D;
+       }
+
+       .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+        margin-left: 100px;
+        margin-right: 400px;
+        margin-top: 20px;
+        
+       }
+
+       .text-head {
+        font-size: 20px;
+        background-color: #04AA6D;
+        border: 1px solid #ccc;
+        color: white;
+        padding-left: 10px;
+        margin-top: 20px;
+       }
+       
+       .text-border {
+        border: 1px solid #ddd;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+       }
+
+       .text-background {
+        background-color: #ddd;
+        position: relative;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding:10px;
+       }
+
+       #nav-table {
+        font-family: 'Times New Roman', Times, serif;
+        border-collapse: collapse;
+       }
+
+       #nav-table td, #nav-table th{
+        border: 1px solid #ddd;
+        padding: 10px;
+       }
+
+       #nav-table th {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+       }
+
+       #nav-table tr:hover {
+        background-color: #ddd;
+       }
+
+       #table {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        font-size: 12px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+       }
+
+       #table td, #table th {
+       border: 1px solid #ddd;
+       padding: 10px;
+       }
+
+       #table tr:hover {
+        background-color: #ddd;
+       }
+
+       #table th {
+       padding-top: 12px;
+       padding-bottom: 12px;
+       text-align: left;
+       background-color: #04AA6D;
+       color: white;
+       }
+       
+       .end-section {
+        background-color: black;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+       }
+
+       .end-details {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: small;
+        color: white;
+        margin-top: 20px;
+
+       }
+
+    </style>
+</head>
+<body>
+    <div class="form-btn" style="float: right;">
+        <a href="signup.html">Sign Up</a>
+    </div>
+    <div class="form-btn">
+    </div>
+    <p style="background-color:teal"><img src="Maulana-Azad-National-Institute-of-Technology-Logo.png" style="width: 800px; height:200px; margin-left: 50px;"></p>
+    <div class="dropdwn">
+        <button class="dropbtn">Home</button>
+        <div class="dropdwn-content">
+        <a href="History.html">History</a>
+        <a href="About_Us.html">About Us</a>
+        <a href="Mission_Vision_&_Goal.html">Mission Vision & Goal</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Academics</button>
+        <div class="dropdwn-content">
+            <a href="Academics_programmes.html">Academics Programmes</a>
+            <a href="Ordinance.html">Ordinance</a>
+            <a href="UG_PG_Schemes.html">UG PG Schemes</a>
+            <a href="Admission_Registration.html">Admission/Registration</a>
+            <a href="Examination_section.html">Examination Section</a>
+            <a href="Time_table.html">Time Table</a>
+            <a href="Scholarship.html">Scholarship</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Departments</button>
+        <div class="dropdwn-content">
+            <a href="Architecture_&_planning.html">Architecture & Planning</a>
+            <a href="Engineering.html">Engineering</a>
+            <a href="Science.html">Science</a>
+            <a href="Humanities.html">Humanities</a>
+            <a href="Management_Studies.html">Management Studies</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Student Zone</button>
+        <div class="dropdwn-content">
+            <a href="Professional_Club.html">Professional Club</a>
+            <a href="Literacy_Club.html">Literacy Club</a>
+            <a href="Technical_Club.html">Technical Club</a>
+            <a href="Cultural_Club.html">Cultural Club</a>
+            <a href="Social_committee.html">Social Committee</a>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="search-container">
+            <form action="MANIT">
+            <input type="text" placeholder="Search......." name="search">
+             <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="inner-top-banner"></div>
+    <h1 style="text-align: center; background-color: #333; color: #ccc;">IEEE</h1>
+    <div style="float: right;">
+        <table id="nav-table" style="margin-right: 50px; margin-top: 10px; width: 300px;">
+            <tr><th>Professional Clubs</th></tr>
+            <tr><td>SAE Collegiate Club</td></tr>
+            <tr><td>ISTE</td></tr>
+            <tr><td>IEEE</td></tr>
+            <tr><td>N.S.S</td></tr>
+            <tr><td>Web Development and Internet Radio Club (WDIRC)</td></tr>
+        </table>
+    </div>
+    <div class="text">
+    <table id="table">
+        <tr>
+            <td><b>Cordinator</b></td>
+            <td><ol type="1">
+                <li>Dr. Manisha Dubey</li>
+                <li>Dr. Jyoti Singhai</li>
+            </ol></td>
+        </tr>
+        <tr>
+            <td><b>Co-Cordinators</b></td>
+            <td><ol type="1">
+                <li>Giribabu</li>
+                <li>Dr. Lalita Gupta</li>
+                <li>Dr. Sangeeta Nakhate</li>
+            </ol></td>
+        </tr>
+        <tr>
+            <td><b>Student Cordinator</b></td>
+            <td><ol type="1">
+                <li>Vedanti Deshmukh</li>
+                <li>Shyam Fagun</li>
+            </ol></td>
+        </tr>
+        <tr>
+            <td><b>Student Co-Cordinator</b></td>
+            <td><ol type="1">
+                <li>Akshat Jain</li>
+                <li>Anmol Gupta</li>
+                <li>Vivek Chauhan</li>
+                <li>Anant Ojha</li>
+            </ol></td>
+        </tr>
+    </table>
+    <p><b><ins>About IEEE MANIT STUDENT BRANCH</ins></b></p>
+    <p>The Institute of Electrical and Electronic Engineers (IEEE), world’s largest professional association inspires a global community through its highly cited publications, conferences, technology standards, and professional and educational activities.</p>
+    <p>The IEEE–MANIT student branch was inaugurated on 14th March 2011 with Dr. Shailendra Jain as the Branch Counsellor and Dr. R K Baghel as the Branch Mentor. The IEEE Student Branch at MANIT endeavours to promote awareness among students on the opportunities that exist in the field of computer science, electronics and electrical engineering. IEEE MANIT helps students develop their professional and technical abilities by organising various events all-round the year with well-defined objectives. Since the inception, it has been at the helm directing and promoting technical expertise.</p>
+    <p>Follow us at fb.com/ieeemanit and ieeenitb.org</p>
+    <p><b><ins>VISION:</ins></b></p>
+    <p>Our objective is to bridge the gap between industry and students studying in technology-related fields, while promoting and providing an intellectually stimulating university environment for the student body. IEEE MANIT Student Branch aims to provide an interactive platform for students to develop professional and technical abilities that benefit both the individual and society.</p>
+    <p><b><ins>GOVERNING BODY:</ins></b></p>
+    <p>The Student Branch elects its Executive Committee annually. The Branch Counsellor, Mentor and Faculty Advisors form the guidelines and implements the selection process.</p>
+    </div>
+</body>
+</html>

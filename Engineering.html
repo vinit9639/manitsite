@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biological Science & Engineering</title>
+    <link rel="icon" type="image/x-icon" href="MANIT LOGO.png" >
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+       .navbar {
+        overflow: hidden;
+        background-color: #333;
+       }
+
+       .navbar a{
+        float: left;
+        display: block;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+       }
+       
+       .dropdwn {
+        float: left;
+        overflow: hidden;
+        background-color: #333;
+       }
+       
+       .dropdwn .dropbtn{
+        font-size: medium;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+       }
+       
+       .navbar a:hover, .dropdwn:hover, .dropbtn {
+        background-color: red;
+       }
+
+       .dropdwn-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+       }
+       
+       .dropdwn-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+       }
+       
+       .dropdwn-content a:hover {
+        background-color: #ddd;
+       }
+
+       .dropdwn:hover .dropdwn-content {
+        display: block;
+       }
+
+       .navbar .search-container {
+       float: right;
+       }
+
+       .navbar input[type=text] {
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       border: none;
+       font-size: 17px;
+       }
+
+       .navbar .search-container button {
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       background: #ddd;
+       font-size: 17px;
+       border: none;
+       cursor: pointer;
+       }
+
+       .navbar .search-container button:hover {
+       background: #ccc;
+       }
+
+       @media screen and (max-width: 600px) {
+       .navbar a, .navbar input[type=text], .navbar .search-container button {
+       float: none;
+       display: block;
+       text-align: left;
+       width: 100%;
+       margin: 0;
+       padding: 14px;
+        }
+       }
+       .navbar input[type=text] {
+       border: 1px solid #ccc;  
+       }
+
+       .inner-top-banner {
+        color: black;
+        background: url("https://images.shiksha.com/mediadata/images/1515656470php9JdBKt.jpeg");
+        background-size: 100% 100%;
+        min-height: 300px;
+       }
+
+       @media (max-width: 1024px) and (min-width:768px) {
+        .inner-top-banner {
+            min-height: 190px;
+        }
+       }
+
+       .form-btn{
+       float: right;
+       padding: 6px;
+       margin-top: 8px;
+       margin-right: 16px;
+       background: #ddd;
+       font-size: 17px;
+       border: none;
+       cursor: pointer;
+       }
+
+       .form-btn :hover {
+        background-color: #04AA6D;
+       }
+
+       .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+        margin-left: 100px;
+        margin-right: 400px;
+        margin-top: 20px;
+       }
+
+       .text-head {
+        font-size: 20px;
+        background-color: #04AA6D;
+        border: 1px solid #ccc;
+        color: white;
+        padding-left: 10px;
+        margin-top: 20px;
+       }
+       
+       .text-border {
+        border: 1px solid #ddd;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+       }
+
+       #nav-table {
+        font-family: 'Times New Roman', Times, serif;
+        border-collapse: collapse;
+       }
+
+       #nav-table td, #nav-table th{
+        border: 1px solid #ddd;
+        padding: 10px;
+       }
+
+       #nav-table th {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+       }
+
+       #nav-table tr:hover {
+        background-color: #ddd;
+       }
+
+       #table {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        font-size: 12px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+       }
+
+       #table td, #table th {
+       border: 1px solid #ddd;
+       padding: 10px;
+       }
+
+       #table tr:hover {
+        background-color: #ddd;
+       }
+
+       #table th {
+       padding-top: 12px;
+       padding-bottom: 12px;
+       text-align: left;
+       background-color: #04AA6D;
+       color: white;
+       }
+       
+       .end-section {
+        background-color: black;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+       }
+
+       .end-details {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: small;
+        color: white;
+        margin-top: 20px;
+
+       }
+
+    </style>
+</head>
+<body>
+    <div class="form-btn" style="float: right;">
+        <a href="signup.html">Sign Up</a>
+    </div>
+    <div class="form-btn">
+    </div>
+    <p style="background-color:teal"><img src="Maulana-Azad-National-Institute-of-Technology-Logo.png" style="width: 800px; height:200px; margin-left: 50px;"></p>
+    <div class="dropdwn">
+        <button class="dropbtn">Home</button>
+        <div class="dropdwn-content">
+        <a href="History.html">History</a>
+        <a href="About_Us.html">About Us</a>
+        <a href="Mission_Vision_&_Goal.html">Mission Vision & Goal</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Academics</button>
+        <div class="dropdwn-content">
+            <a href="Academics_programmes.html">Academics Programmes</a>
+            <a href="Ordinance.html">Ordinance</a>
+            <a href="UG_PG_Schemes.html">UG PG Schemes</a>
+            <a href="Admission_Registration.html">Admission/Registration</a>
+            <a href="Examination_section.html">Examination Section</a>
+            <a href="Time_table.html">Time Table</a>
+            <a href="Scholarship.html">Scholarship</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Departments</button>
+        <div class="dropdwn-content">
+            <a href="Architecture_&_planning.html">Architecture & Planning</a>
+            <a href="Engineering.html">Engineering</a>
+            <a href="Science.html">Science</a>
+            <a href="Humanities.html">Humanities</a>
+            <a href="Management_Studies.html">Management Studies</a>
+        </div>
+    </div>
+    <div class="dropdwn">
+        <button class="dropbtn">Student Zone</button>
+        <div class="dropdwn-content">
+            <a href="Professional_Club.html">Professional Club</a>
+            <a href="Literacy_Club.html">Literacy Club</a>
+            <a href="Technical_Club.html">Technical Club</a>
+            <a href="Cultural_Club.html">Cultural Club</a>
+            <a href="Social_committee.html">Social Committee</a>
+        </div>
+    </div>
+    <div class="navbar">
+        <a href="Gallery.html">Gallery</a>
+        <div class="search-container">
+            <form action="MANIT">
+            <input type="text" placeholder="Search......." name="search">
+             <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="inner-top-banner"></div>
+    <h1 style="text-align: center; background-color: #333; color: #ccc;">Biological Science & Engineering</h1>
+    <div style="float: right;">
+        <table id="nav-table" style="margin-right: 50px; margin-top: 10px; width: 300px;">
+            <tr><th>Engineering</th></tr>
+            <tr><td>Biological Science & Engineering</td></tr>
+            <tr><td>Civil Engineering</td></tr>
+            <tr><td>Chemical Engineering</td></tr>
+            <tr><td>Computer Science & Engineering</td></tr>
+            <tr><td>Electrical Engineering</td></tr>
+            <tr><td>Electronics & Communication Engineering</td></tr>
+            <tr><td>Materials  & Metallurgical Engineering</td></tr>
+            <tr><td>Mechanical Engineering</td></tr>
+        </table>
+    </div>
+
+    <div class="text">
+        <div class="text-head">
+            <p><b>Home/About the Department</b></p>
+        </div>
+        <div class="text-border">
+            <p style="font-size: 18px;"><b>About the Department</b></p>
+            <p>The Department of Biological Science & Engineering is a relatively new department of the institute that started in July 2012. It offers M . Tech in Biotechnology and Ph. D program. The department has 04 highly qualified and dedicated faculty who strive to produce competent professionals.</p>
+            <p>The faculty members have been delivering expert lectures in various research and academic organizations of India and abroad. The department faculty have extramural as well as intramural research projects from various government funding agency i.e  ICAR, CSIR, DST-SERB, MP Biotech Council and MPCST Bhopal.</p>
+            <p><b>Programme Educational Objectives (PEOs)</b></p>
+            <p> Programme Educational Objectives (PEOs) of the programme M.Tech. in Biotechnology address wide aspects of Biotechnology in line with the Department’s vision and mission. These are: </p>
+            <table id="table">
+                <tr>
+                    <td style="text-align: center;">PEO 1</td>
+                    <td>To produce globally capable graduates in the domain of biotechnology with knowledge in the areas of genetic engineering, bioinformatics, genomics, and proteomics along with problem-solving skills for success in professional careers in industry and academia.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">PEO 2</td>
+                    <td>To establish state-of-the-art infrastructure for genomic and proteomic analyses, with the explicit goal of improving public health, agriculture, and industry for the betterment of sustainable development.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">PEO 3</td>
+                    <td>To seed research, education, translation, and service networks among clinicians and researchers from different disciplines for the promotion of better public health through the establishment of genomics infrastructure in hospitals and medical colleges.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">PEO 4</td>
+                    <td>To anchor young talent on the national soil and build capacity on Genomics and Proteomics through specialized postgraduate programs and organizing various training programs for postgraduate and Ph.D. students in Biotechnology</td>
+                </tr>
+            </table>
+            <p><b>Program Outcome</b></p>
+            <p>After completion of programme of PG in Biological science and Engineering with a Specialization in Biotechnology, graduates must possess the following Program Outcomes:</p>
+            <table id="table">
+                <tr>
+                    <td>POs</td>
+                    <td>Program Outcome</td>
+                </tr>
+                <tr>
+                    <td>PO1</td>
+                    <td>An ability to communicate effectively to convey the ideas acquired through research.</td>
+                </tr>
+                <tr>
+                    <td>PO2</td>
+                    <td>	
+                        An understanding of professional and ethical responsibility.</td>
+                </tr>
+                <tr>
+                    <td>PO3</td>
+                    <td>An ability to use the techniques, skills, and modern tools necessary for biotechnological practice.</td>
+                </tr>
+                <tr>
+                    <td>PO4</td>
+                    <td>An ability to conduct independent research both of an academic and applied nature.</td>
+                </tr>
+            </table>
+        </div>
+        <div class="text-head">
+            <p><b>Vision</b></p>
+        </div>
+        <div class="text-border">
+            <p>To accelerate teaching and research innovations</p>
+        </div>
+        <div class="text-head">
+            <p><b>Mission</b></p>
+        </div>
+        <div class="text-border">
+            <p>To carry out teaching and research on Genomics and Proteomics and to redefine agriculture, healthcare, and industry in India and globally by simulating clinical and agriculture excellence by training and research.</p>
+        </div>
+        <div class="text-head">
+            <p><b>Courses</b></p>
+        </div>
+        <div class="text-border">
+            <p>Currently we are running the M. Tech and PhD program in Biotechnology.</p>
+            <p><b>M. Tech in Biotechnology</b></p>
+            <p><b><ins>SCHEME OF STUDY</ins></b></p>
+            <p><b>First Semester</b></p>
+            <table id="table">
+                <tr>
+                    <td><b>Course No.</b></td>
+                    <td><b>Subject</b></td>
+                    <td colspan="3"><b>Scheme of Studies Periods Per week</b></td>
+                    <td>Total Credits</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>L</td>
+                    <td>T</td>
+                    <td>P</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>BIO-511</b></td>
+                    <td>Biostatistics & Bioinformatics</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td><b>BIO-512</b></td>
+                    <td>Instrumentation in Biotechnology</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td><b>BIO-513</b></td>
+                    <td>Genetic Engineering & Population Genetics</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td><b>BIO-514</b></td>
+                    <td>Cell & Tissue Culture Engineering (Core 3)</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td><b>HUM-511</b></td>
+                    <td>Communication Skills</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Elective-1 (A)</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Elective-2 (A)</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>BIO-515</td>
+                    <td>LAB-1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>2</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>BIO-516</td>
+                    <td>Seminar-1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>2</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Total Hours : 24</td>
+                    <td rowspan="2" colspan="2">Total Semester Credit</td>
+                    <td rowspan="2">22</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Total Credit : 22</td>
+                </tr>
+            </table>
+
+            <p><b>Second Semester</b></p>
+            
+            <table id="table">
+                <tr>
+                    <td><b>Course No.</b></td>
+                    <td><b>Subject</b></td>
+                    <td colspan="3"><b>Scheme of Studies Periods Per week</b></td>
+                    <td>Total Credits</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>L</td>
+                    <td>T</td>
+                    <td>P</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>BIO-521</b></td>
+                    <td>Cheminformatics & Drug Designing</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td><b>BIO-522</b></td>
+                    <td>Molecular Biotyping</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td><b>BIO-523</b></td>
+                    <td>Bionanotechnology</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Elective- 3 (A)</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Elective- 4 (A)</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Elective- 5 (C)</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>BIO-524</td>
+                    <td>Research Methodology</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>BIO-525</td>
+                    <td>LAB-2</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>2</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>BIO-526</td>
+                    <td>Seminar-2</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>2</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Total Hours : 30</td>
+                    <td rowspan="2" colspan="2">Total Semester Credit</td>
+                    <td rowspan="2">22</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Total Credit : 44</td>
+                </tr>
+            </table>
+
+            <p><b>Third Semester</b></p>
+            
+            <table id="table">
+                <tr>
+                    <td><b>Course No.</b></td>
+                    <td><b>Subject</b></td>
+                    <td colspan="3"><b>Scheme of Studies Periods Per week</b></td>
+                    <td>Total Credits</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>L</td>
+                    <td>T</td>
+                    <td>P</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>BIO-611</td>
+                    <td>Dissertation  Phase-I</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>32</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Total Hours : 32</td>
+                    <td rowspan="2" colspan="2">Total Semester Credit</td>
+                    <td rowspan="2">16</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Total Credit : 60</td>
+                </tr>
+            </table>
+
+            <p><b>Fourth Semester</b></p>
+            
+            <table id="table">
+                <tr>
+                    <td><b>Course No.</b></td>
+                    <td><b>Subject</b></td>
+                    <td colspan="3"><b>Scheme of Studies Periods Per week</b></td>
+                    <td>Total Credits</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>L</td>
+                    <td>T</td>
+                    <td>P</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>BIO-612</td>
+                    <td>Dissertation  Phase-II</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>40</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Total Hours : 40</td>
+                    <td rowspan="2" colspan="2">Total Semester Credit</td>
+                    <td rowspan="2">20</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Total Credit : 80</td>
+                </tr>
+            </table>
+
+            <table id="table">
+                <tr>
+                    <td colspan="2"><b>List of Program Electives A</b></td>
+                    <td colspan="2"><b>List of Open Electives C</b></td>
+                </tr>
+                <tr>
+                    <td>BIO-551</td>
+                    <td>Bio safety and Bio security Regulations</td>
+                    <td>APR-581</td>
+                    <td>Introduction to Urban Planning</td>
+                </tr>
+                <tr>
+                    <td>BIO-552</td>
+                    <TD>Protein Engineering & Enzyme Technology</TD>
+                    <td>CHE-581</td>
+                    <td>Analytical Techniques</td>
+                </tr>
+                <tr>
+                    <td>BIO-553</td>
+                    <td>Genomics & Transcriptomics</td>
+                    <td>CHE-582</td>
+                    <td>Green Technology & Processes</td>
+                </tr>
+                <tr>
+                    <td>BIO-554</td>
+                    <td>Computational Biology</td>
+                    <td>CE-581</td>
+                    <td>Solid Waste Management</td>
+                </tr>
+                <tr>
+                    <td>BIO-555</td>
+                    <td>Computational Phylogenetics</td>
+                    <td>CE-582</td>
+                    <td>Basic Concept of GIS</td>
+                </tr>
+                <tr>
+                    <td>BIO-556</td>
+                    <td>System Biology</td>
+                    <td>CE-583</td>
+                    <td>Road Safety</td>
+                </tr>
+                <tr>
+                    <td>BIO-557</td>
+                    <td>Molecular  & Cellular Diagnosis</td>
+                    <td>C SE-581</td>
+                    <td>Machine Learning</td>
+                </tr>
+                <tr>
+                    <td>BIO-558</td>
+                    <td>Environmental Biotechnology</td>
+                    <td>C SE-582</td>
+                    <td>Advanced data Structures and Algorithms</td>
+                </tr>
+                <tr>
+                    <td>BIO-559</td>
+                    <td>Molecular Biology</td>
+                    <td>PHY-581</td>
+                    <td>Nanotechnology and Nanoscience</td>
+                </tr>
+                <tr>
+                    <td>BIO-560</td>
+                    <td>Cell Biology</td>
+                    <td>EE-581</td>
+                    <td>Electric Machines & Applications</td>
+                </tr>
+                <tr>
+                    <td>BIO-561</td>
+                    <td>Microbiology & Immunology</td>
+                    <td>EE-582</td>
+                    <td>Control and Instrumentation</td>
+                </tr>
+                <tr>
+                    <td>BIO-562</td>
+                    <td>Bioenergy Engineering</td>
+                    <td>ECE-581</td>
+                    <td>Introduction to Fuzzy Logic</td>
+                </tr>
+                <tr>
+                    <td>BIO-563</td>
+                    <td>Computational Advancements in Biotechnology</td>
+                    <td>ECE-582</td>
+                    <td>Neural Networks and its Applications</td>
+                </tr>
+                <tr>
+                    <td>BIO-564</td>
+                    <td>Biodiversity  and Bioprospecting</td>
+                    <td>EC-581</td>
+                    <td>Energy Resource Technologies</td>
+                </tr>
+                <tr>
+                    <td>BIO-565</td>
+                    <td>Biochemistry & Physiology</td>
+                    <td>HUM-581</td>
+                    <td>Intellectual Property Rights for Engineers</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>HUM-582</td>
+                    <td>Applied Psychology Human Centred Design and Engineering</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>MTH-581</td>
+                    <td>Advanced Operations Research</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>MTH-582</td>
+                    <td>Computing Technologies</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>ME-581</td>
+                    <td>Value Engineering</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>ME-582</td>
+                    <td>Design Thinking</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>ME-583</td>
+                    <td>Mechatronics and NDT in Engineering</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>MME-581</td>
+                    <td>Advanced Instrumentation Methods for Material Analysis</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>MME-582</td>
+                    <td>Smart Materials and their Application</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>MBA-581</td>
+                    <td>	
+                        Engineering Start up Management</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="text-head">
+            <p><b>Research Groups</b></p>
+        </div>
+        <div class="text-border">
+            <p><b>Research carried out in the Department under different groups as below:</b></p>
+            <ol type="1">
+                <li><b>Dr. Kiran Singh:</b> Meta genomics, Molecular Biology and Phylogenetics.</li>
+                <li><b>Dr. Rahul M Shrivastava:</b> Proteomics, Secondary Metabolites & Molecular Modelling.</li>
+                <li><b>Dr. Khushhali M Pandey:</b> Plant Tissue culture, Computer Aided Drug Designing & Artificial intelligence in Structural Biology.</li>
+                <li><b>Dr. Shivendra K Chuarsiya :</b>  Host-Pathogen Interaction and Signal Transduction, Molecular Basis of disease </li>
+            </ol>
+        </div>
+
+        <div class="text-head">
+            <p>Labs</p>
+        </div>
+        <div class="text-border">
+            <p>The M. Tech / Ph.D laboratory is being conducted in the mentioned laboratories:</p>
+            <table id="table">
+                <tr>
+                    <td><b>Name of the Laboratory</b></td>
+                    <td><b>Important Equipment Name</b></td>
+                </tr>
+                <tr>
+                    <td>Proteomics & Metabolomics</td>
+                    <td>ELISA Plate reader, Spectrophotometer, Inverted microscope, BOD incubator, BS cabinet, CO2 incubator and HPLC</td>
+                </tr>
+                <tr>
+                    <td>Genomics Lab</td>
+                    <td>Real Time PCR, Thermal cycler, Ultrasonicator, Inverted Microscope, Laminar Air Flow, Plant Growth Chamber and Culture facility .</td>
+                </tr>
+                <tr>
+                    <td>Molecular Signalling</td>
+                    <td>BSC cabinet, Laminar flow, Probe Sonicator, Blotting Unit, Thermal Cycler, Double distillation unit, CO2 incubator, BOD incubator</td>
+                </tr>
+                <tr>
+                    <td>Computational Biology</td>
+                    <td>Hardware and software’s used for computer aided drug design:  Discovery studio, SPSS, HP workstations, HP blade server</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="text-head">
+            <p><b>Projects/patent/consultant</b></p>
+        </div>
+        <div class="text-border">
+            <p><b>Extramural</b></p>
+            <table id="table">
+                <tr>
+                    <td><b>S.NO.</b></td>
+                    <td><b>Faculty Name</b></td>
+                    <td><b>Project Title</b></td>
+                    <td><b>Funding Agency</b></td>
+                    <td><b>Amount and Duration</b></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Dr.Kiran Singh</td>
+                    <td>Application of microorganisms in agriculture and allied sectors</td>
+                    <td>ICAR, New Delhi</td>
+                    <td>14 Lac per year (Till 2013, Completed)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Dr. Rahul M Shrivastava</td>
+                    <td>Screening of Anti venom potential of medicinal plants from tribal region of Madhya Pradesh</td>
+                    <td>CSIR, , New Delhi</td>
+                    <td>23.50 Lakh, 3 Year (Completed)</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Dr. Rahul M Shrivastava</td>
+                    <td>Phytochemical evaluation & chemical characterization of Glycosmis Pentathylla root extract in relation to various skin alignments</td>
+                    <td>MPCST, Bhopal</td>
+                    <td>4.68 Lakh, 2  Year (Completed)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Dr. Rahul M Shrivastava</td>
+                    <td>Green synthesis of bi-metallic nanoparticles using leave extract of common arrowhead houseplant and its anticandidal and antibiofilm activity</td>
+                    <td>UGC-DAE, Indore</td>
+                    <td>1.35 Lakh 3 Year (Completed)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Dr. Khushhali M Pandey</td>
+                    <td>“Computational approach to prioritize drug like molecule for chikungunya virus by exploring genomic information”</td>
+                    <td>MP Biotech Council, Bhopal</td>
+                    <td>6.33 Lakh 2 Year</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Dr. Khushhali M Pandey</td>
+                    <td>Identification of Novel Protein Drug Targets and Biomarkers Utilizing Protein – Protein Interaction Network for Vitiligo</td>
+                    <td>MPCST, Bhopal</td>
+                    <td>3.44 Lakh 2 year</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Dr. Shivendra K Chuarsiya</td>
+                    <td>Determining the role of glutamate decarboxylase in mycobacterial drug tolerance and adaptation-survival within host cells</td>
+                    <td>DST-SERB</td>
+                    <td>43.65 Lakh 3 year</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="text-head">
+            <p><b>Event/News</b></p>
+        </div>
+        <div class="text-border">
+            <p>Department of Biological Sc. & Engg. , MANIT Bhopal has organized various academic programs like Short Term Training / Workshops/ Conferences and Expert Lecture as below:</p>
+            <ol type="1">
+                <li>National conference on “Genomics: Tool for Bio prospecting”, 20 - 21 November 2010.</li>
+                <li>Short  term training program on “Bioinformatics for Biologists”, 18 - 22 March 2013.</li>
+                <li>One day workshop on “Chem informatics: A Bird’s Eye View”, 16 April 2013.</li>
+                <li>Short term training program on “Synthesis Characterization and Application of  iomaterial”, 25 – 29 June 2014</li>
+                <li>5 Days Workshop on Current Trends in Biotechnology (CTBT - 2020), 20 – 24th January,2020</li>
+                <li>Expert lecture on : Microbe Interaction : Inter-Kingdoom crosstalk at the rhizosphere level, from Dr. P. Guansekaran, Vice Chancellor, VIT- Bhopal on 16-Oct-2019</li>
+                <li>Expert lecture under Industry academia interaction with Dr. Arvind K. Mishra, MD Apar pharma , Banglore on 31st March 2022.</li>
+            </ol>
+        </div>
+
+        <div class="text-head">
+            <p><b>Out Reach activities</b></p>
+        </div>
+        <div class="text-border">
+            <p>Our faculties are Involved various outreach activities in various public and private organization such as:</p>
+            <ul>
+                <li>Evaluation of external Research Projects</li>
+                <li>Delivery of expert lectures in various National and  International platforms.</li>
+                <li>Examiner of Doctoral and Masters dissertations of various universities / institutions.</li>
+                <li>Member of Board of Studies (BOS) of various  Institutions and universities .</li>
+                <li>Member of Expert panel in different organization.</li>
+                <li>Editor, Editorial Member, Reviewer, Program Committee members, Advisory Committee members of various Journals/ Conferences of repute.
+                </li>
+            </ul>
+        </div>
+    </div>
+   
+</body>
+</html>
